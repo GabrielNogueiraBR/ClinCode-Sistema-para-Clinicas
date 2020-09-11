@@ -13,11 +13,11 @@ public class Pessoa {
         this.rg = rg;
         this.cpf = cpf;
         this.email = email;
-        logradouro.rua = rua;
-        logradouro.num = num;
-        logradouro.bairro = bairro;
-        logradouro.cidade = cidade;
-        logradouro.estado = estado;
+        this.logradouro.rua = rua;
+        this.logradouro.num = num;
+        this.logradouro.bairro = bairro;
+        this.logradouro.cidade = cidade;
+        this.logradouro.estado = estado;
     }
 
     public String getNome() {
