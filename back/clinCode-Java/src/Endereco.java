@@ -5,14 +5,6 @@ public class Endereco {
     protected String cidade;
     protected String estado;
 
-    public Endereco(String rua, String bairro, int num, String cidade, String estado) {
-        this.rua = rua;
-        this.bairro = bairro;
-        this.num = num;
-        this.cidade = cidade;
-        this.estado = estado;
-    }
-
     public String getRua() {
         return rua;
     }

@@ -1,4 +1,6 @@
-public class Pessoa extends Endereco {
+public class Pessoa {
+    Endereco logradouro = new Endereco();
+
     protected String nome;
     protected String dataNascimento;
     protected String rg;
@@ -6,12 +8,16 @@ public class Pessoa extends Endereco {
     protected String email;
 
     public Pessoa(String nome, String dataNascimento, String rg, String cpf, String email, String rua, String bairro, int num, String cidade, String estado) {
-        super(rua, bairro, num, cidade, estado);
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.rg = rg;
         this.cpf = cpf;
         this.email = email;
+        logradouro.rua = rua;
+        logradouro.num = num;
+        logradouro.bairro = bairro;
+        logradouro.cidade = cidade;
+        logradouro.estado = estado;
     }
 
     public String getNome() {
@@ -56,7 +62,7 @@ public class Pessoa extends Endereco {
 
     @Override
     public String toString() {
-        return "Nome: " + nome + ",\nData de Nascimento: " + dataNascimento + ", \nRG: " + rg + ", \nCPF: " + cpf + ", \nEmail: " + email + super.toString();
+        return "Nome: " + nome + ",\nData de Nascimento: " + dataNascimento + ", \nRG: " + rg + ", \nCPF: " + cpf + ", \nEmail: " + email + logradouro.toString();
     }
 
 }
