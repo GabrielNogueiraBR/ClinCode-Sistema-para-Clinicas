@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Random;
 
 
 public class Consulta {
@@ -14,7 +13,6 @@ public class Consulta {
     protected String medicacao;
     protected String habitos;
     Scanner ler = new Scanner(System.in);
-    Random random = new Random();
 
     public String getRg() {
         return rg;
@@ -81,8 +79,6 @@ public class Consulta {
     }
 
     public Consulta() {
-    
-        this.id_consulta = random.nextInt(1000);
         System.out.println("Digite o seu RG: ");
         this.rg = ler.next();
         
