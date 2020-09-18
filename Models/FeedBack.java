@@ -1,41 +1,40 @@
 public class FeedBack {
-    public class Feedback extends Pessoa {
 
-        protected String feedbackT;
-        protected String feedbackM;
-        protected String celular;
+        protected String Nome;
+        protected String Email;
+        protected String Celular;
+        protected String Sugest_Opini; //Sugestão / Opinião
     
-        public Feedback(String nome, String dataNascimento, String rg, String cpf, 
-        String email, String rua, String bairro, int num, String cidade, String estado)
-        {
-            super(nome, dataNascimento, rg, cpf, email, rua, bairro, num, cidade, estado);
-            this.feedbackT = feedbackT;
-            this.feedbackM = feedbackM;
-            this.celular = celular;
+        public String getNome() {
+            return Nome;
         }
     
-        public String getFeedbackT() {
-            return feedbackT;
+        public void setNome(String Nome) {
+            this.Nome = Nome;
         }
     
-        public void setFeedbackT(String feedbackT) {
-            this.feedbackT = feedbackT;
+        public String getEmail() {
+            return Email;
         }
     
-        public String getFeedbackM() {
-            return feedbackM;
-        }
-    
-        public void setFeedbackM(String feedbackM) {
-            this.feedbackM = feedbackM;
+        public void setEmail(String Email) {
+            this.Email = Email;
         }
     
         public String getCelular() {
-            return celular;
+            return Celular;
         }
     
-        public void setCelular(String celular) {
-            this.celular = celular;
+        public void setCelular(String Celular) {
+            this.Celular = Celular;
         }
-    }
+
+        public String getSugest_Opini(){
+            return Sugest_Opini;
+        }
+
+        public void setSugest_Opini(String Sugest_Opini){
+            this.Sugest_Opini = Sugest_Opini;
+        }
+    
 }
