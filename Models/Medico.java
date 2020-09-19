@@ -1,5 +1,3 @@
-package classes;
-
 public class Medico extends Pessoa {
 
     protected String crm;
