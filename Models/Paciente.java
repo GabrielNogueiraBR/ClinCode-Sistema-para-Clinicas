@@ -5,7 +5,6 @@ public class Paciente extends Pessoa {
     protected int Carteirinha;
     protected String Vicios;
     protected String Doencas;
-    protected int id_consulta;
     
 
     public Paciente(String nome, String dataNascimento, String rg, String cpf, String email, String rua, String bairro,
@@ -55,14 +54,6 @@ public class Paciente extends Pessoa {
 
     public void setDoencas(String doencas) {
         Doencas = doencas;
-    }
-
-    public int getId_consulta() {
-        return id_consulta;
-    }
-
-    public void setId_consulta(int id_consulta) {
-        this.id_consulta = id_consulta;
     }
 
 }
