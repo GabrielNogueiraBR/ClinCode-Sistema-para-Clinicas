@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <title>Controle de Acesso</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <script>
+	
+		function validar() {
+		  
+		  if (document.getElementById("user").value == '' ) 
+		  {
+			alert("Digite um usuário!!");
+			return;
+		  }
+		  
+		  if (document.getElementById("password").value == '')
+		  {
+			alert("Digite uma senha!!");
+			return;
+		  }
+          if(document.getElementById("qualificacao").value == '0')
+          {
+              alert("Digite sua qualificação!!");
+              return;
+          }
+
+		  window.location.href="../pages/index.html";
+		  
+		};
+
+    </script>
+    
+    <div class="container my-background">
+        <div class="row">
+          <div class="col-sm">
+            
+          </div>
+          <div class="col-sm">
+          
+            <form class="formulario">
+
+                <div class="card">
+                    <div class="menu-login" >
+                        <label for="user"></label><br>
+                        <input type="user" id="user" name="user" placeholder="Digite seu usuário">
+                        <label for="password"></label><br>
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha">   
+
+                        
+                   </div>
+        
+                    <div class="card2">
+                        <button type="button" onclick="validar()">Acessar</button>
+                        <button type="reset">Limpar </button>   
+                    </div>
+                    <div class="card3">
+                        <select id="qualificacao">
+                            <option value="0" onclick="validar()" selected>SELECIONE</option> 
+                            <option value="1" onclick="validar()" >Administrador TI</option> 
+                            <option value="2" onclick="validar()" >Médico</option>
+                            <option value="3" onclick="validar()" >Secretaria</option>
+                          </select>
+                    </div>
+        
+                    <div class="logo-login" style = "position:absolute;">
+                        <img class="imglogin" src="../assets/logo_teste.jpg">
+                    </div>
+        
+                </div>
+            </form>
+          </div>
+          <div class="col-sm">
+            
+          </div>
+        </div>
+      </div>
+
+
+
+</body>
+
+</html>
+
