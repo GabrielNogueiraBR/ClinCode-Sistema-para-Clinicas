@@ -7,10 +7,11 @@ public class Paciente extends Pessoa {
     protected String Doencas;
     
 
-    public Paciente(String nome, String dataNascimento, String rg, String cpf, String email, String rua, String bairro,
-    int num, String cidade, String estado, String tipoSanguineo, String Convenio, int Carteirinha, String Vicios, String Doencas) {
-        super(nome, dataNascimento, rg, cpf, email, rua, bairro, num, cidade, estado);
-        this.TipoSanguineo = TipoSanguineo;
+
+    public Paciente(String nome, String dataNascimento, String rg, String cpf, String email, String telefone, String rua, String bairro, int num, String cidade, String estado, String tipoSanguineo, String Convenio, int Carteirinha, String Vicios, String Doencas) {
+        super(nome, dataNascimento, rg, cpf, email, telefone, rua, bairro, num, cidade, estado);
+        this.TipoSanguineo = tipoSanguineo;
+
         this.Convenio = Convenio;
         this.Carteirinha = Carteirinha;
         this.Vicios = Vicios;
