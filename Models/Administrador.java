@@ -3,8 +3,8 @@
 public class Administrador extends Pessoa{
 
 
-    public Administrador(String nome, String dataNascimento, String rg, String cpf, String email, String telefone, String rua, String bairro, int num, String cidade, String estado) {
-        super(nome, dataNascimento, rg, cpf, email, telefone, rua, bairro, num, cidade, estado)
+    public Administrador(final String nome, final String dataNascimento, final String rg, final String cpf, final String email, final String telefone, final String rua, final String bairro, final int num, final String cidade, final String estado) {
+        super(nome, dataNascimento, rg, cpf, email, telefone, rua, bairro, num, cidade, estado);
     }
     
 }
