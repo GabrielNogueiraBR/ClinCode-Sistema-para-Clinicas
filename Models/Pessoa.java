@@ -6,9 +6,11 @@ public class Pessoa {
     protected String rg;
     protected String cpf;
     protected String email;
+
     protected String telefone;
 
     public Pessoa(String nome, String dataNascimento, String rg, String cpf, String email, String telefone, String rua, String bairro, int num, String cidade, String estado) {
+
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.rg = rg;
@@ -62,6 +64,7 @@ public class Pessoa {
         this.email = email;
     }
 
+
     public String getTelefone() {
         return telefone;
     }
@@ -73,6 +76,7 @@ public class Pessoa {
     @Override
     public String toString() {
         return "Nome: " + nome + ",\nData de Nascimento: " + dataNascimento + ", \nRG: " + rg + ", \nCPF: " + cpf + ", \nEmail: " + email + ",\nTelefone: " + telefone + logradouro.toString();
+
     }
 
 }

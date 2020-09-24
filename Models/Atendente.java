@@ -38,8 +38,10 @@ public class Atendente extends Pessoa {
         this.ler = ler;
     }
 
+
     public Atendente(String nome, String dataNascimento, String rg, String cpf, String email, String telefone, String rua, String bairro, int num, String cidade, String estado, String turno, String disponibilidade, String restricao, Scanner ler) {
         super(nome, dataNascimento, rg, cpf, email, telefone, rua, bairro, num, cidade, estado);
+
         this.turno = turno;
         this.disponibilidade = disponibilidade;
         this.restricao = restricao;
