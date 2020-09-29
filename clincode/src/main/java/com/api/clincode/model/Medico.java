@@ -1,3 +1,5 @@
+package com.api.clincode.model;
+
 public class Medico extends Pessoa {
 
     protected String crm;

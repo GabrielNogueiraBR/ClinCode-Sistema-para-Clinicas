@@ -1,3 +1,5 @@
+package com.api.clincode.model;
+
 public class Pessoa {
     Endereco logradouro = new Endereco();
 

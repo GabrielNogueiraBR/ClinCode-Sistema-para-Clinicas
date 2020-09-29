@@ -1,3 +1,5 @@
+package com.api.clincode.model;
+
 //@autor: Gabriel Nogueira 
 //Descrição: Essa classe vai conter as informações de login de cada usuário. 
 //Vai buscar no BD as informaçoes DE ACORDO com os privilégio (se é medico, paciente, atendente ou admin) e construir a o objeto de acordo com essas informações.

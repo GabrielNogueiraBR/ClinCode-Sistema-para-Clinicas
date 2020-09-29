@@ -1,3 +1,5 @@
+package com.api.clincode.model;
+
 //@autor: Gabriel Nogueira 
 //Descrição: Essa classe vai identificar o tipo de usuario que está logando em nosso sistema (se é um Paciente ou Administrador do sistema). Com ela, podemos direcionar corretamente cada usuário para a página que está de acordo com seus privilégios ou permissões.
 public class  Privilegios {

@@ -1,3 +1,5 @@
+package com.api.clincode.model;
+
 public class Endereco {
     protected String rua;
     protected String bairro;

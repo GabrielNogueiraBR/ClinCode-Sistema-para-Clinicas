@@ -1,3 +1,4 @@
+package com.api.clincode.model;
 import java.util.Scanner;
 
 

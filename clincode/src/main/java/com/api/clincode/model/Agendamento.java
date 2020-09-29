@@ -1,3 +1,5 @@
+package com.api.clincode.model;
+
 public class Agendamento {
 
     protected String Nome;
@@ -11,7 +13,7 @@ public class Agendamento {
         return Nome;
     }
 
-    public void setNome(String Nome){
+    public void setNome(final String Nome){
         this.Nome = Nome;
     }
 
@@ -19,7 +21,7 @@ public class Agendamento {
         return Telefone;
    }
 
-    public void setTelefone(String Telefone){
+    public void setTelefone(final String Telefone){
         this.Telefone = Telefone;
     }
 
@@ -27,7 +29,7 @@ public class Agendamento {
         return Email;
     }
 
-    public void setEmail(String Email){
+    public void setEmail(final String Email){
         this.Email = Email;
     }
 
@@ -35,7 +37,7 @@ public class Agendamento {
         return Especilidade;
     }
 
-    public void setEspecilidade(String Especilidade){
+    public void setEspecilidade(final String Especilidade){
         this.Especilidade = Especilidade;
     }
 
@@ -43,14 +45,14 @@ public class Agendamento {
         return Data;
     }
 
-    public void setData(String Data){
+    public void setData(final String Data){
         this.Data = Data;
     }
     public String getHorario(){
         return Horario;
     }
 
-    public void setHorario(String Horario){
+    public void setHorario(final String Horario){
         this.Horario = Horario;
     }
 
