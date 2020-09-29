@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ClincodeApplication<clincode>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.api.clincode.ClincodeApplication",
+            "projectName": "clincode",
+            "args": ""
+        }
+    ]
+}
