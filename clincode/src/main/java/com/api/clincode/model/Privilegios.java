@@ -49,5 +49,8 @@ public class  Privilegios {
         this.usuario_admin = usuario_admin;
     }
 
+    public Privilegios() {
+    }
+
     
 }
