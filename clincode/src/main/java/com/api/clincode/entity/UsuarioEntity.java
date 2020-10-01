@@ -25,6 +25,7 @@ public class UsuarioEntity{
     private Boolean usuario_admin;
 
     //chaves estrangeiras nas tabelas de paciente, medico e atendente
+    private int fk_pessoa;
     private int fk_paciente;
     private int fk_medico;
     private int fk_atendente;
@@ -119,5 +120,13 @@ public class UsuarioEntity{
 
     public void setFk_admin(int fk_admin) {
         this.fk_admin = fk_admin;
-    }    
+    }
+
+    public int getFk_pessoa() {
+        return fk_pessoa;
+    }
+
+    public void setFk_pessoa(int fk_pessoa) {
+        this.fk_pessoa = fk_pessoa;
+    }
 }
