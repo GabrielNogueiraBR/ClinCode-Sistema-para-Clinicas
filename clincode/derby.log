@@ -1,11 +1,11 @@
 ----------------------------------------------------------------
-Wed Sep 30 23:03:16 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0174-e1e6-3ccb-000000f78f00 
-on database directory C:\Users\gabri\Desktop\ClinCode-Sistema-para-Clinicas-master\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
+Wed Sep 30 21:25:35 BRT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0174-e18c-cba9-000001a57e10 
+on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
 Loaded from file:/C:/Users/gabri/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=14.0.1+7
-user.dir=c:\Users\gabri\Desktop\ClinCode-Sistema-para-Clinicas-master\clincode
+user.dir=c:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
