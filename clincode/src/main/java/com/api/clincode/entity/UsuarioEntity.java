@@ -1,5 +1,7 @@
 package com.api.clincode.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,8 +12,12 @@ import javax.persistence.Id;
 //Descrição: Essa classe vai conter as informações de login de cada usuário. 
 //Vai buscar no BD as informaçoes DE ACORDO com os privilégio (se é medico, paciente, atendente ou admin) e construir a o objeto de acordo com essas informações.
 @Entity
-public class UsuarioEntity{
+public class UsuarioEntity implements Serializable{
     
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_usuario;
