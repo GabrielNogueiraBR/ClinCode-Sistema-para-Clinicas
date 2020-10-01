@@ -1,12 +1,21 @@
 package com.api.clincode.model;
 
-public class Medico{
+public class Medico extends Pessoa {
 
     protected String crm;
 	protected String login;
 	protected String turno;
 	protected String especialidade1;
 	protected String especialidade2;
+	
+
+
+	public Medico(String nome, String dataNascimento, String rg, String cpf, String email, String telefone, String rua, String bairro, int num, String cidade, String estado, String crm, String login) {
+		super(nome, dataNascimento, rg, cpf, email, telefone, rua, bairro, num, cidade, estado);
+
+		this.crm = crm;
+		this.login = login;
+	}
 
 	public String getCrm() {
 		return crm;
