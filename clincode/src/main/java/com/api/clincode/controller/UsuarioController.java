@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -37,5 +38,9 @@ public class UsuarioController {
         return ResponseEntity.created(uri).build();
     }
     
-
+    @GetMapping("/login")
+    public ModelAndView redirecionaLogin(){
+        ModelAndView mv = new ModelAndView("loginPaciente");
+        return mv;
+    }
 }
