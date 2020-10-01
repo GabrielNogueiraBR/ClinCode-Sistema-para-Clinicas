@@ -1,4 +1,4 @@
-![ClinCode] (logo.png)
+![ClinCode] (https://github.com/GabrielNogueiraBR/ClinCode-Sistema-para-Clinicas/blob/master/Logo.png)
  
 <p align="center">O projeto consiste em um sistema, que será utilizado em clínicas (públicas ou
 particulares) de médicos gerais. 🩺</p>
