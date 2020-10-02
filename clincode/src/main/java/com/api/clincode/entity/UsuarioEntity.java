@@ -31,12 +31,8 @@ public class UsuarioEntity implements Serializable{
     private Boolean usuario_admin;
 
     //chaves estrangeiras nas tabelas de paciente, medico e atendente
-    private int fk_pessoa;
-    private int fk_paciente;
-    private int fk_medico;
-    private int fk_atendente;
-    private int fk_admin;
-    
+    private int fk_idPessoa;
+
     public int getId_usuario() {
         return id_usuario;
     }
@@ -93,46 +89,14 @@ public class UsuarioEntity implements Serializable{
         this.usuario_admin = usuario_admin;
     }
 
-    public UsuarioEntity() {
+    public int getFk_idPessoa() {
+        return fk_idPessoa;
     }
 
-    public int getFk_paciente() {
-        return fk_paciente;
+    public void setFk_idPessoa(int fk_idPessoa) {
+        this.fk_idPessoa = fk_idPessoa;
     }
-
-    public void setFk_paciente(int fk_paciente) {
-        this.fk_paciente = fk_paciente;
-    }
-
-    public int getFk_medico() {
-        return fk_medico;
-    }
-
-    public void setFk_medico(int fk_medico) {
-        this.fk_medico = fk_medico;
-    }
-
-    public int getFk_atendente() {
-        return fk_atendente;
-    }
-
-    public void setFk_atendente(int fk_atendente) {
-        this.fk_atendente = fk_atendente;
-    }
-
-    public int getFk_admin() {
-        return fk_admin;
-    }
-
-    public void setFk_admin(int fk_admin) {
-        this.fk_admin = fk_admin;
-    }
-
-    public int getFk_pessoa() {
-        return fk_pessoa;
-    }
-
-    public void setFk_pessoa(int fk_pessoa) {
-        this.fk_pessoa = fk_pessoa;
-    }
+    
+    
+    
 }
