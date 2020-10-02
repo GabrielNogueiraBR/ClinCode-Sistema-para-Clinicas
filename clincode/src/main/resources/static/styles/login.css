@@ -1,0 +1,115 @@
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .main-head{
+    height: 150px;
+    background: #FFF;
+  }
+  
+  .h2, h2 {
+    font-size: 3.1rem !important;
+    font: sans-serig;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem !important;
+    font: sans-serig;
+  }
+  .sidenav {
+    height: 100%;
+    background-color: #4075FF;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  .imglogin {
+    height: 220px;
+    margin-top: -10px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+  }
+  
+  .main {
+    padding: 0px 10px;
+  }
+  
+  @media screen and (max-width: 800px){
+    .sidenav {padding-top: 15px;}
+    .main {
+      padding: 0px 10px;
+      margin-top: 25px;
+  }
+    p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .imglogin {
+      height: 220px;
+      margin-top: -50px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 15px;
+  }
+    .h2, h2 {
+      font-size: 3rem !important;
+      font: sans-serig;
+      text-align: center;
+      top: 15%;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    .login-form{
+        margin-top: 10%;
+    }
+  
+    .register-form{
+        margin-top: 10%;
+    }
+  }
+  
+  @media screen and (min-width: 768px){
+    .main{
+        margin-left: 40%; 
+    }
+  
+    .sidenav{
+        width: 35%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+  
+    .login-form{
+        margin-top: 80%;
+    }
+  
+    .register-form{
+        margin-top: 20%;
+    }
+  }
+  
+  .login-main-text{
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+  }
+  
+  .login-main-text h2{
+    font-weight: 300;
+  }
+  
+  .btn-blue{
+    background-color: #4075FF !important;
+    color: #fff;
+  }
+  .btn-secondary {
+    background-color: #4075FF !important;
+    color: #fff;
+  }
+  

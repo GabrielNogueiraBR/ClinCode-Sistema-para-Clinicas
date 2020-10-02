@@ -1,0 +1,57 @@
+body > .infos {
+    flex-grow: 1;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+body > .content {
+    flex-grow: 1;
+}
+
+.content{
+    padding: 50px 80px;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    background-color: var(--cor-primaria);
+}
+
+.intro{
+    flex:1;
+}
+
+.content .intro{
+    color: #ffff;
+}
+.content #titulo{
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.content #sobre{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.infos{
+    padding: 150px 80px;
+    padding-right: 50%;
+    display: flex;
+	justify-content: center;
+    align-items: center;
+    background-image: url(../assets/bg_login.jpg);
+    background-color: #0000008c;
+    background-size: cover;
+}
+
+.infos .info{
+    color: #fff;
+    font-size: 20px;
+    background-color: #4075ff91;
+    border-radius: 15px;
+    padding: 30px 15px;
+    
+}
