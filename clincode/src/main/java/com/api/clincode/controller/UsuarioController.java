@@ -9,6 +9,7 @@ import com.api.clincode.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
@@ -43,4 +44,17 @@ public class UsuarioController {
         ModelAndView mv = new ModelAndView("loginPaciente");
         return mv;
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<UsuarioEntity> getUsuarioByID(@PathVariable final int id){
+        UsuarioEntity usuario;
+        usuario = service.getUsuarioByID(id);
+
+        if(usuario != null)
+            return ResponseEntity.ok(usuario);
+        else
+            return ResponseEntity.notFound().build();
+    }
+
+
 }

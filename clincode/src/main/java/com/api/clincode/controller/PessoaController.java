@@ -35,7 +35,4 @@ public class PessoaController {
         else
             return ResponseEntity.notFound().build();
     }
-
-    
-
 }

@@ -13,69 +13,72 @@ public class PacienteEntity extends PessoaEntity{
      *
      */
     private static final long serialVersionUID = 1L;
-    private String TipoSanguineo;
-    private String Convenio;
-    private int Carteirinha;
-    private String Vicios;
-    private String Doencas;
+    private String  tipoSanguineo;
+    private String  convenio;
+    private int     numeroCarteirinha;
+    private String  vicios;
+    private String  doencas;
 
     public String getTipoSanguineo() {
-        return TipoSanguineo;
+        return tipoSanguineo;
     }
 
     public void setTipoSanguineo(String tipoSanguineo) {
-        TipoSanguineo = tipoSanguineo;
+        this.tipoSanguineo = tipoSanguineo;
     }
 
     public String getConvenio() {
-        return Convenio;
+        return convenio;
     }
 
     public void setConvenio(String convenio) {
-        Convenio = convenio;
+        this.convenio = convenio;
     }
 
-    public int getCarteirinha() {
-        return Carteirinha;
+    public int getNumeroCarteirinha() {
+        return numeroCarteirinha;
     }
 
-    public void setCarteirinha(int carteirinha) {
-        Carteirinha = carteirinha;
+    public void setNumeroCarteirinha(int numeroCarteirinha) {
+        this.numeroCarteirinha = numeroCarteirinha;
     }
 
     public String getVicios() {
-        return Vicios;
+        return vicios;
     }
 
     public void setVicios(String vicios) {
-        Vicios = vicios;
+        this.vicios = vicios;
     }
 
     public String getDoencas() {
-        return Doencas;
+        return doencas;
     }
 
     public void setDoencas(String doencas) {
-        Doencas = doencas;
+        this.doencas = doencas;
     }
-    
+
+    //metodo criado para a utilizacao no PUT
     public void setAtributosByObject(PacienteEntity entity){
-        this.Carteirinha = entity.getCarteirinha();
-        this.Convenio = entity.getConvenio();
-        this.Doencas = entity.getDoencas();
-        this.TipoSanguineo = entity.getTipoSanguineo();
-        this.Vicios = entity.getVicios();
+        this.numeroCarteirinha = entity.getNumeroCarteirinha();
+        this.convenio = entity.getConvenio();
+        this.doencas = entity.getDoencas();
+        this.tipoSanguineo = entity.getTipoSanguineo();
+        this.vicios = entity.getVicios();
         
         this.setNome(entity.getNome());
         this.setDataNascimento(entity.getDataNascimento());
         this.setRg(entity.getRg());
         this.setCpf(entity.getCpf());
         this.setEmail(entity.getEmail());
-        this.setTelefone(entity.getTelefone());
+        this.setTelefone1(entity.getTelefone1());
+        this.setTelefone2(entity.getTelefone2());
         this.setRua(entity.getRua());
         this.setBairro(entity.getBairro());
         this.setNumeroCasa(entity.getNumeroCasa());
         this.setCidade(entity.getCidade());
         this.setEstado(entity.getEstado());
+        this.setSenha(entity.getSenha());
     }
 }

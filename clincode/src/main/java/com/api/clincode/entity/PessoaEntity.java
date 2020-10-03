@@ -25,12 +25,15 @@ public class PessoaEntity implements Serializable{
     private String rg;
     private String cpf;
     private String email;
-    private String telefone;
+    private String telefone1;
+    private String telefone2;
     private String rua;
     private String bairro;
     private int numeroCasa;
     private String cidade;
     private String estado;
+    private String senha;
+    
 
     public int getIdPessoa() {
         return idPessoa;
@@ -80,14 +83,6 @@ public class PessoaEntity implements Serializable{
         this.email = email;
     }
 
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
     public String getRua() {
         return rua;
     }
@@ -126,6 +121,30 @@ public class PessoaEntity implements Serializable{
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public String getTelefone1() {
+        return telefone1;
+    }
+
+    public void setTelefone1(String telefone1) {
+        this.telefone1 = telefone1;
+    }
+
+    public String getTelefone2() {
+        return telefone2;
+    }
+
+    public void setTelefone2(String telefone2) {
+        this.telefone2 = telefone2;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
     
     

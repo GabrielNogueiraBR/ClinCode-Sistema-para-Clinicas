@@ -7,7 +7,6 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class ViewController {
     
-
     @GetMapping("index")
     public ModelAndView paginaInicio(){
         return new ModelAndView("index");
@@ -22,8 +21,4 @@ public class ViewController {
     public ModelAndView cadastroLogin(){
         return new ModelAndView("cad-pacientes");
     }
-    
-    
-
-
 }

@@ -15,7 +15,7 @@ public class PacienteService {
     private PacienteRepository repository;
 
 	public List<PacienteEntity> getAllPacientes() {
-		return repository.findAll();
+		return repository.findAll(); 
 	}
 
 	public PacienteEntity salvarPaciente(PacienteEntity entity) {
@@ -23,15 +23,17 @@ public class PacienteService {
 	}
 
 	public PacienteEntity getPacienteByID(int id) {
-		return repository.getOne(id);
+		PacienteEntity paciente = repository.findById(id).get();
+		return paciente;
 	}
 
 	public PacienteEntity putPacienteByID(int id, PacienteEntity paciente) {
 		
-		PacienteEntity auxiliar = repository.getOne(id);
+		PacienteEntity auxiliar = getPacienteByID(id);
 
 		if(auxiliar != null){
 			auxiliar.setAtributosByObject(paciente);
+			repository.save(auxiliar);
 			return auxiliar;
 		}
 		else
@@ -39,7 +41,7 @@ public class PacienteService {
 	}
 
 	public void deletePacienteByID(int id) {
-		PacienteEntity auxiliar = repository.getOne(id);
+		PacienteEntity auxiliar = getPacienteByID(id);
 		
 		if(existePacienteByID(id)){
 			repository.delete(auxiliar);
@@ -48,7 +50,8 @@ public class PacienteService {
 	}
 
 	public Boolean existePacienteByID(int id) {
-		PacienteEntity paciente = repository.getOne(id);
+		PacienteEntity paciente;
+		paciente = getPacienteByID(id);
 
 		if(paciente != null)
 			return true; //existe o paciente informado

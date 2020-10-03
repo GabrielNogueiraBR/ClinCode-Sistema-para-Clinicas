@@ -30,7 +30,7 @@ public class PacienteController {
     }
     
     @GetMapping("/{id}")
-    public ResponseEntity<PacienteEntity> getPacienteByID(@PathVariable int id){
+    public ResponseEntity<PacienteEntity> getPacienteByID(@PathVariable final int id){
         PacienteEntity paciente;
         paciente = service.getPacienteByID(id);
 
@@ -67,17 +67,12 @@ public class PacienteController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletePacienteByID(@PathVariable int id){
-        
+        Boolean val = service.existePacienteByID(id);
 
-        if(service.existePacienteByID(id)){
+        if(val == true){
             service.deletePacienteByID(id);
             return ResponseEntity.noContent().build();
         }
-
         return ResponseEntity.notFound().build();
-
-
     }
-    
-
 }
