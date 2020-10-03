@@ -9,8 +9,11 @@ import com.api.clincode.service.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -26,8 +29,19 @@ public class PacienteController {
         return service.getAllPacientes();
     }
     
+    @GetMapping("/{id}")
+    public ResponseEntity<PacienteEntity> getPacienteByID(@PathVariable int id){
+        PacienteEntity paciente;
+        paciente = service.getPacienteByID(id);
+
+        if(paciente != null)
+            return ResponseEntity.ok(paciente);
+        else
+            return ResponseEntity.notFound().build();
+    }
+
     @PostMapping()
-    public ResponseEntity<Void> salvarPaciente(@RequestBody PacienteEntity entity){
+    public ResponseEntity<Void> postPaciente(@RequestBody PacienteEntity entity){
         entity = service.salvarPaciente(entity);
 
         if(entity != null)
@@ -38,5 +52,32 @@ public class PacienteController {
         else
             return ResponseEntity.notFound().build();
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<PacienteEntity> putPacienteByID(@PathVariable int id, @RequestBody PacienteEntity paciente){
+       
+        paciente = service.putPacienteByID(id, paciente);
+
+        if(paciente != null){
+            return ResponseEntity.ok(paciente);
+        }
+
+        return ResponseEntity.notFound().build();
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletePacienteByID(@PathVariable int id){
+        
+
+        if(service.existePacienteByID(id)){
+            service.deletePacienteByID(id);
+            return ResponseEntity.noContent().build();
+        }
+
+        return ResponseEntity.notFound().build();
+
+
+    }
+    
 
 }

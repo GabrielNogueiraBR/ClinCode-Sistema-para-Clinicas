@@ -18,5 +18,10 @@ public class PessoaService {
 		return repository.findAll();
 	}
 
+	public PessoaEntity getPessoaByID(int id) {
+		return repository.getOne(id);
+	}
+
+	
     
 }
