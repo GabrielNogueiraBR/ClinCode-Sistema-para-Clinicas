@@ -10,6 +10,22 @@
     font-family: 'Montserrat', 'sans-serif';
 }
 
+body > .content {
+    flex-grow: 1;
+}
+
+body{
+    height: 100vh;
+}
+
+.content{
+    padding: 50px 80px;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    background-color: var(--cor-primaria);
+}
+
 .body-group{
     min-height:90vh;
     background-color: var(--cor-primaria);
@@ -45,12 +61,37 @@ footer{
     color: #000;
 }
 
+
 .btn.btn-clin{
     color: var(--cor-primaria);
-    border: 2px solid var(--cor-primaria);
-    font-weight: bold;
+    border: 1px solid var(--cor-primaria);
+    background-color: #fff;
 }
 
 .btn.btn-clin:hover{
     background-color: var(--cor-primaria);
+    color: #fff;
 }
+
+.btn-form{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 20px;
+}
+
+.form-background{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form-style {
+    padding: 5px 40px;
+}
+
+.h3, b {
+    font-size: 2.7rem !important;
+    font: sans-serig;
+    color: #4075FF;
+  }
