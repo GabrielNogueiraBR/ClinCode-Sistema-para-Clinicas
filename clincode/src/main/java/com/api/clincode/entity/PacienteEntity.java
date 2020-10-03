@@ -59,6 +59,23 @@ public class PacienteEntity extends PessoaEntity{
         Doencas = doencas;
     }
     
-    
-
+    public void setAtributosByObject(PacienteEntity entity){
+        this.Carteirinha = entity.getCarteirinha();
+        this.Convenio = entity.getConvenio();
+        this.Doencas = entity.getDoencas();
+        this.TipoSanguineo = entity.getTipoSanguineo();
+        this.Vicios = entity.getVicios();
+        
+        this.setNome(entity.getNome());
+        this.setDataNascimento(entity.getDataNascimento());
+        this.setRg(entity.getRg());
+        this.setCpf(entity.getCpf());
+        this.setEmail(entity.getEmail());
+        this.setTelefone(entity.getTelefone());
+        this.setRua(entity.getRua());
+        this.setBairro(entity.getBairro());
+        this.setNumeroCasa(entity.getNumeroCasa());
+        this.setCidade(entity.getCidade());
+        this.setEstado(entity.getEstado());
+    }
 }
