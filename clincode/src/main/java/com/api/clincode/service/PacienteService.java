@@ -23,8 +23,14 @@ public class PacienteService {
 	}
 
 	public PacienteEntity getPacienteByID(int id) {
-		PacienteEntity paciente = repository.findById(id).get();
-		return paciente;
+		PacienteEntity paciente;
+
+		if(repository.findById(id).isPresent()){
+			paciente = repository.findById(id).get();	
+			return paciente;
+		}
+		else
+			return null;
 	}
 
 	public PacienteEntity putPacienteByID(int id, PacienteEntity paciente) {
