@@ -18,7 +18,12 @@ public class ViewController {
     }
     
     @GetMapping("cadastro/pacientes")
-    public ModelAndView cadastroLogin(){
+    public ModelAndView cadastroPaciente(){
         return new ModelAndView("cad-pacientes");
     }
+
+    @GetMapping("cadastro/medicos")
+    public ModelAndView cadastroMedico(){
+        return new ModelAndView("cad-medico");
+    }    
 }
