@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Sat Oct 03 16:22:42 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0174-efea-93e3-0000011554c0 
+Wed Oct 07 13:13:58 BRT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0175-03d7-3993-000000f36b90 
 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
 Loaded from file:/C:/Users/gabri/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
@@ -12,9 +12,9 @@ os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Sat Oct 03 16:27:24 BRT 2020:
-Shutting down instance a816c00e-0174-efea-93e3-0000011554c0 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
-Sat Oct 03 16:27:25 BRT 2020 Thread[Thread-20,5,main] Cleanup action starting
+Wed Oct 07 13:14:38 BRT 2020:
+Shutting down instance a816c00e-0175-03d7-3993-000000f36b90 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
+Wed Oct 07 13:14:39 BRT 2020 Thread[Thread-20,5,main] Cleanup action starting
 ERROR XBM0I: Directory bdclincode cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -34,7 +34,7 @@ ERROR XBM0I: Directory bdclincode cannot be removed.
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:832)
 Cleanup action completed
-Sat Oct 03 16:27:25 BRT 2020 Thread[Thread-20,5,main] Cleanup action starting
+Wed Oct 07 13:14:39 BRT 2020 Thread[Thread-20,5,main] Cleanup action starting
 ERROR XBM0I: Directory bdclincode cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -55,8 +55,8 @@ ERROR XBM0I: Directory bdclincode cannot be removed.
 	at java.base/java.lang.Thread.run(Thread.java:832)
 Cleanup action completed
 ----------------------------------------------------------------
-Sat Oct 03 16:27:27 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a0200101-0174-efea-93e3-0000011554c0 
+Wed Oct 07 13:14:40 BRT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance f67740d7-0175-03d7-3993-000000f36b90 
 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
 Loaded from file:/C:/Users/gabri/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
@@ -68,9 +68,9 @@ os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Sat Oct 03 16:27:28 BRT 2020:
-Shutting down instance a0200101-0174-efea-93e3-0000011554c0 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
-Sat Oct 03 16:27:29 BRT 2020 Thread[Thread-33,5,main] Cleanup action starting
+Wed Oct 07 13:14:46 BRT 2020:
+Shutting down instance f67740d7-0175-03d7-3993-000000f36b90 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
+Wed Oct 07 13:14:47 BRT 2020 Thread[Thread-36,5,main] Cleanup action starting
 ERROR XBM0I: Directory bdclincode cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -90,7 +90,7 @@ ERROR XBM0I: Directory bdclincode cannot be removed.
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:832)
 Cleanup action completed
-Sat Oct 03 16:27:29 BRT 2020 Thread[Thread-33,5,main] Cleanup action starting
+Wed Oct 07 13:14:47 BRT 2020 Thread[Thread-36,5,main] Cleanup action starting
 ERROR XBM0I: Directory bdclincode cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -111,8 +111,8 @@ ERROR XBM0I: Directory bdclincode cannot be removed.
 	at java.base/java.lang.Thread.run(Thread.java:832)
 Cleanup action completed
 ----------------------------------------------------------------
-Sat Oct 03 16:27:37 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 3f3e811c-0174-efea-93e3-0000011554c0 
+Wed Oct 07 13:14:48 BRT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 247a40f2-0175-03d7-3993-000000f36b90 
 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
 Loaded from file:/C:/Users/gabri/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
@@ -124,9 +124,9 @@ os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Sat Oct 03 16:27:38 BRT 2020:
-Shutting down instance 3f3e811c-0174-efea-93e3-0000011554c0 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
-Sat Oct 03 16:27:39 BRT 2020 Thread[Thread-47,5,main] Cleanup action starting
+Wed Oct 07 13:14:52 BRT 2020:
+Shutting down instance 247a40f2-0175-03d7-3993-000000f36b90 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
+Wed Oct 07 13:14:53 BRT 2020 Thread[Thread-52,5,main] Cleanup action starting
 ERROR XBM0I: Directory bdclincode cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -146,7 +146,7 @@ ERROR XBM0I: Directory bdclincode cannot be removed.
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:832)
 Cleanup action completed
-Sat Oct 03 16:27:39 BRT 2020 Thread[Thread-47,5,main] Cleanup action starting
+Wed Oct 07 13:14:53 BRT 2020 Thread[Thread-52,5,main] Cleanup action starting
 ERROR XBM0I: Directory bdclincode cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -167,8 +167,8 @@ ERROR XBM0I: Directory bdclincode cannot be removed.
 	at java.base/java.lang.Thread.run(Thread.java:832)
 Cleanup action completed
 ----------------------------------------------------------------
-Sat Oct 03 16:27:43 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 24fa0130-0174-efea-93e3-0000011554c0 
+Wed Oct 07 13:14:54 BRT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 0963c106-0175-03d7-3993-000000f36b90 
 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
 Loaded from file:/C:/Users/gabri/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
@@ -179,14 +179,17 @@ os.arch=amd64
 os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
-Sat Oct 03 16:27:43 BRT 2020 Thread[Thread-60,5,main] Cleanup action starting
-java.sql.SQLException: Database 'bdclincode' not found.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+----------------------------------------------------------------
+Wed Oct 07 13:14:57 BRT 2020:
+Shutting down instance 0963c106-0175-03d7-3993-000000f36b90 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
+Wed Oct 07 13:14:58 BRT 2020 Thread[Thread-68,5,main] Cleanup action starting
+ERROR XBM0I: Directory bdclincode cannot be removed.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
 	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
 	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
@@ -198,20 +201,15 @@ java.sql.SQLException: Database 'bdclincode' not found.
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: ERROR XJ004: Database 'bdclincode' not found.
+Cleanup action completed
+Wed Oct 07 13:14:58 BRT 2020 Thread[Thread-68,5,main] Cleanup action starting
+ERROR XBM0I: Directory bdclincode cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 17 more
-============= begin nested exception, level (1) ===========
-ERROR XJ004: Database 'bdclincode' not found.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
 	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
 	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
@@ -223,14 +221,10 @@ ERROR XJ004: Database 'bdclincode' not found.
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-============= end nested exception, level (1) ===========
 Cleanup action completed
 ----------------------------------------------------------------
-Sat Oct 03 16:27:44 BRT 2020:
-Shutting down instance 24fa0130-0174-efea-93e3-0000011554c0 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
-----------------------------------------------------------------
-Sat Oct 03 16:27:44 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 0b198144-0174-efea-93e3-0000011554c0 
+Wed Oct 07 13:14:59 BRT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance eeb1411a-0175-03d7-3993-000000f36b90 
 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
 Loaded from file:/C:/Users/gabri/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
@@ -241,7 +235,10 @@ os.arch=amd64
 os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
-Sat Oct 03 16:27:44 BRT 2020 Thread[Thread-59,5,main] Cleanup action starting
+----------------------------------------------------------------
+Wed Oct 07 13:15:01 BRT 2020:
+Shutting down instance eeb1411a-0175-03d7-3993-000000f36b90 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
+Wed Oct 07 13:15:02 BRT 2020 Thread[Thread-84,5,main] Cleanup action starting
 ERROR XBM0I: Directory bdclincode cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -261,7 +258,7 @@ ERROR XBM0I: Directory bdclincode cannot be removed.
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:832)
 Cleanup action completed
-Sat Oct 03 16:27:44 BRT 2020 Thread[Thread-59,5,main] Cleanup action starting
+Wed Oct 07 13:15:02 BRT 2020 Thread[Thread-84,5,main] Cleanup action starting
 ERROR XBM0I: Directory bdclincode cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -282,51 +279,8 @@ ERROR XBM0I: Directory bdclincode cannot be removed.
 	at java.base/java.lang.Thread.run(Thread.java:832)
 Cleanup action completed
 ----------------------------------------------------------------
-Sat Oct 03 16:27:47 BRT 2020:
-Shutting down instance 0b198144-0174-efea-93e3-0000011554c0 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
-Sat Oct 03 16:27:47 BRT 2020 Thread[Thread-76,5,main] Cleanup action starting
-ERROR XBM0I: Directory bdclincode cannot be removed.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-Cleanup action completed
-Sat Oct 03 16:27:47 BRT 2020 Thread[Thread-76,5,main] Cleanup action starting
-ERROR XBM0I: Directory bdclincode cannot be removed.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-Cleanup action completed
-----------------------------------------------------------------
-Sat Oct 03 16:27:52 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance f19d0158-0174-efea-93e3-0000011554c0 
+Wed Oct 07 13:15:03 BRT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance d462c12e-0175-03d7-3993-000000f36b90 
 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
 Loaded from file:/C:/Users/gabri/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
@@ -337,14 +291,17 @@ os.arch=amd64
 os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
-Sat Oct 03 16:27:52 BRT 2020 Thread[Thread-85,5,main] Cleanup action starting
-java.sql.SQLException: Database 'bdclincode' not found.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+----------------------------------------------------------------
+Wed Oct 07 13:22:28 BRT 2020:
+Shutting down instance d462c12e-0175-03d7-3993-000000f36b90 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
+Wed Oct 07 13:22:28 BRT 2020 Thread[Thread-100,5,main] Cleanup action starting
+ERROR XBM0I: Directory bdclincode cannot be removed.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
 	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
 	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
@@ -356,20 +313,15 @@ java.sql.SQLException: Database 'bdclincode' not found.
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: ERROR XJ004: Database 'bdclincode' not found.
+Cleanup action completed
+Wed Oct 07 13:22:28 BRT 2020 Thread[Thread-100,5,main] Cleanup action starting
+ERROR XBM0I: Directory bdclincode cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 17 more
-============= begin nested exception, level (1) ===========
-ERROR XJ004: Database 'bdclincode' not found.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
 	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
 	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
@@ -381,14 +333,10 @@ ERROR XJ004: Database 'bdclincode' not found.
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-============= end nested exception, level (1) ===========
 Cleanup action completed
 ----------------------------------------------------------------
-Sat Oct 03 16:27:53 BRT 2020:
-Shutting down instance f19d0158-0174-efea-93e3-0000011554c0 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
-----------------------------------------------------------------
-Sat Oct 03 16:27:53 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance d884816c-0174-efea-93e3-0000011554c0 
+Wed Oct 07 13:22:29 BRT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance ba784142-0175-03d7-3993-000000f36b90 
 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
 Loaded from file:/C:/Users/gabri/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
@@ -399,109 +347,10 @@ os.arch=amd64
 os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
-Sat Oct 03 16:27:53 BRT 2020 Thread[Thread-84,5,main] Cleanup action starting
-ERROR XBM0I: Directory bdclincode cannot be removed.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-Cleanup action completed
-Sat Oct 03 16:27:53 BRT 2020 Thread[Thread-84,5,main] Cleanup action starting
-ERROR XBM0I: Directory bdclincode cannot be removed.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-Cleanup action completed
-Sat Oct 03 16:28:00 BRT 2020 Thread[Thread-105,5,main] Cleanup action starting
-java.sql.SQLException: Database 'bdclincode' not found.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: ERROR XJ004: Database 'bdclincode' not found.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 17 more
-============= begin nested exception, level (1) ===========
-ERROR XJ004: Database 'bdclincode' not found.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-============= end nested exception, level (1) ===========
-Cleanup action completed
 ----------------------------------------------------------------
-Sat Oct 03 16:28:00 BRT 2020:
-Shutting down instance d884816c-0174-efea-93e3-0000011554c0 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
-----------------------------------------------------------------
-Sat Oct 03 16:28:00 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance bfd00180-0174-efea-93e3-0000011554c0 
-on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
-Loaded from file:/C:/Users/gabri/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
-java.vendor=Oracle Corporation
-java.runtime.version=14.0.1+7
-user.dir=c:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
-derby.system.home=null
-Database Class Loader started - derby.database.classpath=''
-Sat Oct 03 16:28:00 BRT 2020 Thread[Thread-104,5,main] Cleanup action starting
+Wed Oct 07 13:23:52 BRT 2020:
+Shutting down instance ba784142-0175-03d7-3993-000000f36b90 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
+Wed Oct 07 13:23:53 BRT 2020 Thread[Thread-116,5,main] Cleanup action starting
 ERROR XBM0I: Directory bdclincode cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -521,7 +370,7 @@ ERROR XBM0I: Directory bdclincode cannot be removed.
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:832)
 Cleanup action completed
-Sat Oct 03 16:28:00 BRT 2020 Thread[Thread-104,5,main] Cleanup action starting
+Wed Oct 07 13:23:53 BRT 2020 Thread[Thread-116,5,main] Cleanup action starting
 ERROR XBM0I: Directory bdclincode cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -542,265 +391,8 @@ ERROR XBM0I: Directory bdclincode cannot be removed.
 	at java.base/java.lang.Thread.run(Thread.java:832)
 Cleanup action completed
 ----------------------------------------------------------------
-Sat Oct 03 16:28:07 BRT 2020:
-Shutting down instance bfd00180-0174-efea-93e3-0000011554c0 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
-----------------------------------------------------------------
-Sat Oct 03 16:28:07 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a77f8194-0174-efea-93e3-0000011554c0 
-on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
-Loaded from file:/C:/Users/gabri/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
-java.vendor=Oracle Corporation
-java.runtime.version=14.0.1+7
-user.dir=c:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
-derby.system.home=null
-Sat Oct 03 16:28:08 BRT 2020 Thread[Thread-119,5,main] Cleanup action starting
-ERROR XBM0I: Directory bdclincode cannot be removed.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-Cleanup action completed
-Sat Oct 03 16:28:08 BRT 2020 Thread[Thread-119,5,main] Cleanup action starting
-ERROR XBM0I: Directory bdclincode cannot be removed.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-Cleanup action completed
-Database Class Loader started - derby.database.classpath=''
-----------------------------------------------------------------
-Sat Oct 03 16:28:27 BRT 2020:
-Shutting down instance a77f8194-0174-efea-93e3-0000011554c0 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
-Sat Oct 03 16:28:27 BRT 2020 Thread[Thread-138,5,main] Cleanup action starting
-ERROR XBM0I: Directory bdclincode cannot be removed.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-Cleanup action completed
-Sat Oct 03 16:28:27 BRT 2020 Thread[Thread-138,5,main] Cleanup action starting
-ERROR XBM0I: Directory bdclincode cannot be removed.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-Cleanup action completed
-----------------------------------------------------------------
-Sat Oct 03 16:28:28 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 8f9301a8-0174-efea-93e3-0000011554c0 
-on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
-Loaded from file:/C:/Users/gabri/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
-java.vendor=Oracle Corporation
-java.runtime.version=14.0.1+7
-user.dir=c:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
-derby.system.home=null
-Database Class Loader started - derby.database.classpath=''
-Sat Oct 03 16:28:28 BRT 2020 Thread[Thread-149,5,main] Cleanup action starting
-java.sql.SQLException: Database 'bdclincode' not found.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: ERROR XJ004: Database 'bdclincode' not found.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 17 more
-============= begin nested exception, level (1) ===========
-ERROR XJ004: Database 'bdclincode' not found.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-============= end nested exception, level (1) ===========
-Cleanup action completed
-----------------------------------------------------------------
-Sat Oct 03 16:28:28 BRT 2020:
-Shutting down instance 8f9301a8-0174-efea-93e3-0000011554c0 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
-----------------------------------------------------------------
-Sat Oct 03 16:28:28 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 780a81bc-0174-efea-93e3-0000011554c0 
-on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
-Loaded from file:/C:/Users/gabri/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
-java.vendor=Oracle Corporation
-java.runtime.version=14.0.1+7
-user.dir=c:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
-derby.system.home=null
-Database Class Loader started - derby.database.classpath=''
-Sat Oct 03 16:28:29 BRT 2020 Thread[Thread-148,5,main] Cleanup action starting
-ERROR XBM0I: Directory bdclincode cannot be removed.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-Cleanup action completed
-Sat Oct 03 16:28:29 BRT 2020 Thread[Thread-148,5,main] Cleanup action starting
-ERROR XBM0I: Directory bdclincode cannot be removed.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-Cleanup action completed
-----------------------------------------------------------------
-Sat Oct 03 16:28:43 BRT 2020:
-Shutting down instance 780a81bc-0174-efea-93e3-0000011554c0 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
-Sat Oct 03 16:28:44 BRT 2020 Thread[Thread-166,5,main] Cleanup action starting
-ERROR XBM0I: Directory bdclincode cannot be removed.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-Cleanup action completed
-Sat Oct 03 16:28:44 BRT 2020 Thread[Thread-166,5,main] Cleanup action starting
-ERROR XBM0I: Directory bdclincode cannot be removed.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-Cleanup action completed
-----------------------------------------------------------------
-Sat Oct 03 16:28:48 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 60e601d0-0174-efea-93e3-0000011554c0 
+Wed Oct 07 13:23:53 BRT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a0f1c156-0175-03d7-3993-000000f36b90 
 on database directory C:\Users\gabri\Documents\Gabriel\GitHub\Faculdade\ClinCode-Sistema-para-Clinicas\clincode\bdclincode with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418 
 Loaded from file:/C:/Users/gabri/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation

@@ -1,0 +1,11 @@
+
+*.dat
+*.lck
+*.ctrl
+*.txt
+clincode/bdclincode/service.properties
+*.log
+*.log
+clincode/derby.log
+clincode/derby.log
+clincode/derby.log
