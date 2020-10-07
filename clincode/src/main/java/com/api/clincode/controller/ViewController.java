@@ -12,7 +12,7 @@ public class ViewController {
         return new ModelAndView("index");
     }
 
-    @GetMapping("loginUsuario")
+    @GetMapping("login")
     public ModelAndView paginaLogin(){
         return new ModelAndView("loginPaciente");
     }

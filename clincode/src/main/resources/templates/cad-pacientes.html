@@ -14,8 +14,8 @@
         <nav class="menubar navbar navbar-light justify-content-between">
             <a class="navbar-brand">LOGO</a>
             <form class="form-inline">
-                <a href="cad-pacientes.html"class="menu-items">PACIENTES</a>
-                <a href="index.html"class="menu-items">SAIR</a>
+                <a href="pacientes"class="menu-items">PACIENTES</a>
+                <a href="/index"class="menu-items">SAIR</a>
             </form>
           </nav>
     </header>
@@ -32,11 +32,11 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                        <label for="inputRg">Rg:</label>
+                        <label for="inputRg">RG:</label>
                         <input type="text" class="form-control" id="inputRg" placeholder="Rg" name="rg">
                         </div>
                         <div class="form-group col-md-6">
-                        <label for="inputCpf">Cpf:</label>
+                        <label for="inputCpf">CPF:</label>
                         <input type="text" class="form-control" id="inputCpf" placeholder="123.456.789-01" name="cpf">
                         </div>
                     </div>
@@ -46,12 +46,12 @@
                             <input type="date" class="form-control" id="dateNasc" name="dataNascimento">
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="inputTelefone">Telefone: </label>
-                            <input type="number" class="form-control" id="inputTelefone" placeholder="(XX) 9 1234-1234" name="telefone">
+                            <label for="inputTelefone">Telefone 1: </label>
+                            <input type="number" class="form-control" id="inputTelefone" placeholder="(XX) 9 1234-1234" name="telefone1">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputTelefone2">Telefone 2: </label>
-                            <input type="text" class="form-control" id="inputTelefone2" placeholder="(XX) 9 1234-1234">
+                            <input type="text" class="form-control" id="inputTelefone2" placeholder="(XX) 9 1234-1234" name="telefone2"> 
                         </div>
                     </div>
                     <div class="form-row">
@@ -63,8 +63,7 @@
                             <label for="inputBairro">Bairro: </label>
                             <input type="text" class="form-control" id="inputBairro" placeholder="Jardim" name="bairro">
                         </div>
-                    </div>
-    
+                    </div>    
                     <div class="form-row">
                         <div class="form-group col-md-6">
                         <label for="inputCidade">Cidade:</label>
@@ -75,11 +74,36 @@
                         <input type="text" class="form-control" id="inputEstado" placeholder="SP" name="estado">
                         </div>
                         <div class="form-group col-md-2">
-                        <label for="inputCep">Cep:</label>
-                        <input type="num" class="form-control" id="inputCep" placeholder="12345-678">
+                        <label for="inputCep">Numero da casa:</label>
+                        <input type="num" class="form-control" id="inputNumCasa" placeholder="999" name="numeroCasa">
                         </div>
                     </div>
-    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                        <label for="inputConvenio">Convenio:</label>
+                        <input type="text" class="form-control" id="inputConvenio" placeholder="Santa Casa" name="convenio">
+                        </div>
+                        <div class="form-group col-md-4">
+                        <label for="inputNumeroCarteirinha">Numero da Carteirinha:</label>
+                        <input type="num" class="form-control" id="inputNumeroCarteirinha" placeholder="123456" name="numeroCarteirinha">
+                        </div>
+                        <div class="form-group col-md-2">
+                        <label for="inputTipoSanguineo">Tipo sanguíneo:</label>
+                        <input type="text" class="form-control" id="inputTipoSanguineo" placeholder="A+" name="tipoSanguineo">
+                        </div>
+                    </div>                    
+                    <div class="form-group">
+                        <label for="inputDoencas">Doenças:</label>
+                        <input type="text" class="form-control" id="inputDoencas" placeholder="Descreva aqui todas suas doenças (caso tenha)" name="doencas">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputVicios">Vicios:</label>
+                        <input type="text" class="form-control" id="inputVicios" placeholder="Descreva aqui todos os seus vícios (caso tenha)" name="vicios">
+                    </div>                    
+                    <div class="form-group">
+                        <label for="inputEmail">Email:</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="123@facens.br" name="email">
+                    </div>
                     <div class="form-group">
                         <label for="inputEmail">Email:</label>
                         <input type="email" class="form-control" id="inputEmail" placeholder="123@facens.br" name="email">
@@ -87,11 +111,10 @@
                     <div class="form-group">
                         <label for="inputConfirmEmail">Confirmar Email:</label>
                         <input type="email" class="form-control" id="inputConfirmEmail" placeholder="123@facens.br">
-                    </div>
-    
+                    </div>    
                     <div class="form-group">
                         <label for="inputSenha">Senha:</label>
-                        <input type="password" class="form-control" id="inputSenha" placeholder="12345">
+                        <input type="password" class="form-control" id="inputSenha" placeholder="12345" name="senha">
                     </div>
                     <div class="form-group">
                         <label for="inputConfirmSenha">Confirmar Senha: </label>
