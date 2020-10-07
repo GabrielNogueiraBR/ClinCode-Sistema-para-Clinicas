@@ -9,3 +9,4 @@ clincode/bdclincode/service.properties
 clincode/derby.log
 clincode/derby.log
 clincode/derby.log
+*.log

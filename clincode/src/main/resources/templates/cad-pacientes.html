@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/styles/pacientes.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>ClinCode</title>
+    <title>Cadastro de Pacientes</title>
 </head>
 <body>
     <header class="header">
@@ -15,12 +15,13 @@
             <a class="navbar-brand">LOGO</a>
             <form class="form-inline">
                 <a href="cad-pacientes.html"class="menu-items">PACIENTES</a>
+                <a href="index.html"class="menu-items">SAIR</a>
             </form>
           </nav>
     </header>
     <div class="content">
         <div class="form-background">
-            <center><h3>Cadastrar Paciente</h3></center>
+            <center><h3><b>CADASTRO DE PACIENTE</b></h3></center>
             <hr style="border-color: rgb(64 117 255);">
             
             <form th:action="@{/pacientes}" method="POST">
