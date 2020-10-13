@@ -25,4 +25,8 @@ public class UsuarioService {
                 return entity;
 	}
 
+	public UsuarioEntity getUsuarioByID(int id) {
+		return repository.getOne(id);
+	}
+
 }

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/atendentes.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>ClinCode</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="menubar navbar navbar-light justify-content-between">
+            <a class="navbar-brand">LOGO</a>
+            <form class="form-inline">
+                <a href="atendentes"class="menu-items">ATENDENTES</a>
+                <a href="\index"class="menu-items">SAIR</a>
+            </form>
+          </nav>
+    </header>
+    <div class="content">
+        <div class="form-background">
+            <center><h3><b>CADASTRO DE ATENDENTE</b></h3></center>
+            <hr style="border-color: rgb(64 117 255);">
+            <form>
+                <div class="form-style">
+                    <div class="form-group">
+                        <label for="inputNome">Nome: </label>
+                        <input type="text" class="form-control" id="inputNome" placeholder="João da Silva">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                        <label for="inputCPF">CPF:</label>
+                        <input type="text" class="form-control" id="inputRg" placeholder="123.456.789-01">
+                        </div>
+                        <div class="form-group col-md-6">
+                        <label for="inputRG">RG:</label>
+                        <input type="text" class="form-control" id="inputCpf" placeholder="RG">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="dateNasc">Data de Nascimento: </label>
+                            <input type="date" class="form-control" id="dateNasc">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputTelefone">Telefone: </label>
+                            <input type="text" class="form-control" id="inputTelefone" placeholder="(XX) 9 1234-1234">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Email:</label>
+                        <input type="text" class="form-control" id="inputEmail" placeholder="123@facens.br">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputArea">Área:</label>
+                        <input type="text" class="form-control" id="inputArea" placeholder="Área">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputQuest">Apresenta alguma patologia que o impossibilita de agir no combate do covid-19?</label>
+                        <div class="small-9 columns">
+                            <input type="checkbox" name="rbOp" value="Sim" style="margin: 10px;" />Sim 
+                            <input type="checkbox" name="rbOp" value="Não" style="margin-left: 10px; margin: 10px;" />Não
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEscolha">Se sim, qual(is): </label>
+                        <input type="text" class="form-control" id="inputEscolha" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputTurno">Turno:</label>
+                        <input type="text" class="form-control" id="inputTurno" placeholder="Diurno, Noturno, ...">
+                    </div>
+                </div>
+                <hr style="border-color: rgb(64 117 255);">
+                <div class="btn-form">
+                    <button type="submit" class="btn btn-clin" style="margin-left: 10px;">Cadastrar</button>
+                    <button type="submit" class="btn btn-outline-secondary">Limpar</button>
+                </div>
+            </form>                 
+        </div>
+    </div>
+    <footer class="footer">
+        <b style="float: right;margin-right: 20px;">@PA_FACENS2020-S04</b>
+    </footer>
+</body>
+</html>

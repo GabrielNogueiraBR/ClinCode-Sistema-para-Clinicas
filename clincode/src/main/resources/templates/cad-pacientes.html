@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles/main.css">
-    <link rel="stylesheet" href="../static/styles/pacientes.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/pacientes.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Cadastro de Pacientes</title>
@@ -14,8 +14,8 @@
         <nav class="menubar navbar navbar-light justify-content-between">
             <a class="navbar-brand">LOGO</a>
             <form class="form-inline">
-                <a href="cad-pacientes.html"class="menu-items">PACIENTES</a>
-                <a href="index.html"class="menu-items">SAIR</a>
+                <a href="pacientes"class="menu-items">PACIENTES</a>
+                <a href="/index"class="menu-items">SAIR</a>
             </form>
           </nav>
     </header>
@@ -23,83 +23,103 @@
         <div class="form-background">
             <center><h3><b>CADASTRO DE PACIENTE</b></h3></center>
             <hr style="border-color: rgb(64 117 255);">
-            <form>
+            
+            <form th:action="@{/pacientes}" method="POST">
                 <div class="form-style">
                     <div class="form-group">
-                        <label for="inputNome">Nome: </label>
-                        <input type="text" class="form-control" id="inputNome" placeholder="João da Silva">
+                        <label for="nome">Nome: </label>
+                        <input type="text" class="form-control" id="iputNome" placeholder="João da Silva" name="nome" required>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                        <label for="inputRg">RG:</label>
-                        <input type="text" class="form-control" id="inputRg" placeholder="Rg">
+                        <label for="rg">RG:</label>
+                        <input type="text" class="form-control" id="rg" placeholder="Rg" name="rg" required>
                         </div>
                         <div class="form-group col-md-6">
-                        <label for="inputCpf">CPF:</label>
-                        <input type="text" class="form-control" id="inputCpf" placeholder="123.456.789-01">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" class="form-control" id="cpf" placeholder="123.456.789-01" name="cpf" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
-                            <label for="dateNasc">Data de Nascimento: </label>
-                            <input type="date" class="form-control" id="dateNasc">
+                            <label for="dataNascimento">Data de Nascimento: </label>
+                            <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="inputTelefone">Telefone: </label>
-                            <input type="number" class="form-control" id="inputTelefone" placeholder="(XX) 9 1234-1234">
+                            <label for="telefone1">Telefone 1: </label>
+                            <input type="number" class="form-control" id="telefone1" placeholder="(XX) 9 1234-1234" name="telefone1" required>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="inputTelefone2">Telefone 2: </label>
-                            <input type="text" class="form-control" id="inputTelefone2" placeholder="(XX) 9 1234-1234">
+                            <label for="telefone2">Telefone 2: </label>
+                            <input type="text" class="form-control" id="telefone2" placeholder="(XX) 9 1234-1234" name="telefone2" required> 
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-8">
-                            <label for="inputEndereco">Endereço:</label>
-                            <input type="text" class="form-control" id="inputEndereco" placeholder="R. Facens, 123">
+                            <label for="rua">Endereço:</label>
+                            <input type="text" class="form-control" id="rua" placeholder="R. Facens, 123" name="rua" required>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="inputBairro">Bairro: </label>
-                            <input type="text" class="form-control" id="inputBairro" placeholder="Jardim">
+                            <label for="bairro">Bairro: </label>
+                            <input type="text" class="form-control" id="bairro" placeholder="Jardim" name="bairro" required>
                         </div>
-                    </div>
-    
+                    </div>    
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                        <label for="inputCidade">Cidade:</label>
-                        <input type="text" class="form-control" id="inputCidade" placeholder="Sorocaba">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" class="form-control" id="cidade" placeholder="Sorocaba" name="cidade" required>
                         </div>
                         <div class="form-group col-md-4">
-                        <label for="inputEstado">Estado:</label>
-                        <input type="text" class="form-control" id="inputEstado" placeholder="SP">
+                        <label for="estado">Estado:</label>
+                        <input type="text" class="form-control" id="estado" placeholder="SP" name="estado" required>
                         </div>
                         <div class="form-group col-md-2">
-                        <label for="inputCep">Cep:</label>
-                        <input type="num" class="form-control" id="inputCep" placeholder="12345-678">
+                        <label for="numeroCasa">Numero da casa:</label>
+                        <input type="num" class="form-control" id="numeroCasa" placeholder="999" name="numeroCasa" required>
                         </div>
                     </div>
-    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                        <label for="convenio">Convenio:</label>
+                        <input type="text" class="form-control" id="convenio" placeholder="Santa Casa" name="convenio" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                        <label for="numeroCarteirinha">Numero da Carteirinha:</label>
+                        <input type="num" class="form-control" id="numeroCarteirinha" placeholder="123456" name="numeroCarteirinha" required>
+                        </div>
+                        <div class="form-group col-md-2">
+                        <label for="tipoSanguineo">Tipo sanguíneo:</label>
+                        <input type="text" class="form-control" id="tipoSanguineo" placeholder="A+" name="tipoSanguineo" required>
+                        </div>
+                    </div>                    
                     <div class="form-group">
-                        <label for="inputEmail">Email:</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="123@facens.br">
+                        <label for="doencas">Doenças:</label>
+                        <input type="text" class="form-control" id="doencas" placeholder="Descreva aqui todas suas doenças (caso tenha)" name="doencas">
+                    </div>
+                    <div class="form-group">
+                        <label for="vicios">Vicios:</label>
+                        <input type="text" class="form-control" id="vicios" placeholder="Descreva aqui todos os seus vícios (caso tenha)" name="vicios">
+                    </div>                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="123@facens.br" name="email" required>
                     </div>
                     <div class="form-group">
                         <label for="inputConfirmEmail">Confirmar Email:</label>
-                        <input type="email" class="form-control" id="inputConfirmEmail" placeholder="123@facens.br">
-                    </div>
-    
+                        <input type="email" class="form-control" id="inputConfirmEmail" placeholder="123@facens.br" required>
+                    </div>    
                     <div class="form-group">
-                        <label for="inputSenha">Senha:</label>
-                        <input type="password" class="form-control" id="inputSenha" placeholder="12345">
+                        <label for="senha">Senha:</label>
+                        <input type="password" class="form-control" id="senha" placeholder="12345" name="senha" required>
                     </div>
                     <div class="form-group">
                         <label for="inputConfirmSenha">Confirmar Senha: </label>
-                        <input type="password" class="form-control" id="inputConfirmSenha" placeholder="12345">
+                        <input type="password" class="form-control" id="inputConfirmSenha" placeholder="12345" required>
                     </div>
                 </div>
                 <hr style="border-color: rgb(64 117 255);">
                 <div class="btn-form">
-                    <button type="submit" class="btn btn-clin" style="margin-left: 10px;">Cadastrar</button>
+                    <button type="submit" class="btn btn-clin" style="margin-left: 10px;" value="">Cadastrar</button>
                     <button type="submit" class="btn btn-outline-secondary">Limpar</button>
                 </div>
             </form>                 
