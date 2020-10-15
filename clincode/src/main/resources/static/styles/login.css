@@ -51,11 +51,13 @@ body {
     background-color: #4075FF !important;
     color: #fff;
     width: 25%;
+    border: 1px solid transparent !important;
   }
   .btn-secondary {
     background-color: #4075FF !important;
     color: #fff;
     width: 25%;
+    border: 1px solid transparent !important;
   }
 
   #cargo {
@@ -73,8 +75,8 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    border: 1px solid #ced4da;
-    padding: .375rem .75rem;
+    border: 1px solid transparent;
+    padding: 6.5px 11px 6px;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
