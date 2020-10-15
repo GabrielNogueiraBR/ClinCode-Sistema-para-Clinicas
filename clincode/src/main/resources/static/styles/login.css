@@ -6,7 +6,9 @@ body {
     height: 150px;
     background: #FFF;
   }
-  
+  h2 {
+    margin-top: 1.94rem !important;
+  }
   .h2, h2 {
     font-size: 3.1rem !important;
     font: sans-serig;
@@ -35,7 +37,54 @@ body {
     padding: 0px 10px;
   }
   
-  @media screen and (max-width: 800px){
+  .login-main-text{
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+  }
+  
+  .login-main-text h2{
+    font-weight: 300;
+  }
+  
+  .btn-blue{
+    background-color: #4075FF !important;
+    color: #fff;
+    width: 25%;
+    border: 1px solid transparent !important;
+  }
+  .btn-secondary {
+    background-color: #4075FF !important;
+    color: #fff;
+    width: 25%;
+    border: 1px solid transparent !important;
+  }
+
+  #cargo {
+   background-color: #4075FF !important;
+   color: #fff;
+   background-position: 218px center;
+   border:1px solid #FFF;
+   border-radius: .25rem;
+   display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 6.5px 11px 6px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    height: 35%;
+    width: 48%;
+  }
+
+  @media screen and (min-width: 500px) and (max-width: 767px){
     .sidenav {padding-top: 15px;}
     .main {
       padding: 0px 10px;
@@ -46,33 +95,24 @@ body {
       margin-bottom: 1rem;
       text-align: center;
     }
-    .imglogin {
-      height: 220px;
-      margin-top: -50px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 15px;
-  }
     .h2, h2 {
       font-size: 3rem !important;
       font: sans-serig;
       text-align: center;
       top: 15%;
     }
-  }
-  
-  @media screen and (max-width: 450px) {
-    .login-form{
-        margin-top: 10%;
+    #cargo {
+      width: 100%;
     }
-  
-    .register-form{
-        margin-top: 10%;
+    .btn-blue{
+      width: 49%;
+    }
+    .btn-secondary {
+      width: 49.5%;
     }
   }
-  
-  @media screen and (min-width: 768px){
+    
+  @media screen and (min-width: 768px) and ( max-width: 1590px){
     .main{
         margin-left: 40%; 
     }
@@ -92,24 +132,37 @@ body {
     .register-form{
         margin-top: 20%;
     }
+    .btn-blue{
+      width: 48%;
+    }
+    #cargo {
+      width: 100%;
+    }
+    .btn-secondary {
+      width: 49.7%;
+    }
   }
-  
-  .login-main-text{
-    margin-top: 20%;
-    padding: 60px;
-    color: #fff;
+
+  @media screen and (min-width: 1031px) {
+    .main{
+      margin-left: 40%; 
   }
-  
-  .login-main-text h2{
-    font-weight: 300;
+
+  .sidenav{
+      width: 35%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
   }
-  
-  .btn-blue{
-    background-color: #4075FF !important;
-    color: #fff;
+
+  .login-form{
+      margin-top: 80%;
   }
-  .btn-secondary {
-    background-color: #4075FF !important;
-    color: #fff;
+
+  .register-form{
+      margin-top: 20%;
   }
+  }
+
   
