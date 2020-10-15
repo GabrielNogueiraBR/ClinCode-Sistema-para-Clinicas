@@ -6,9 +6,11 @@ body {
     height: 150px;
     background: #FFF;
   }
+
   h2 {
     margin-top: 1.94rem !important;
   }
+
   .h2, h2 {
     font-size: 3.1rem !important;
     font: sans-serig;
@@ -37,6 +39,7 @@ body {
     padding: 0px 10px;
   }
   
+
   .login-main-text{
     margin-top: 20%;
     padding: 60px;
@@ -85,6 +88,7 @@ body {
   }
 
   @media screen and (min-width: 500px) and (max-width: 767px){
+
     .sidenav {padding-top: 15px;}
     .main {
       padding: 0px 10px;
@@ -95,12 +99,14 @@ body {
       margin-bottom: 1rem;
       text-align: center;
     }
+
     .h2, h2 {
       font-size: 3rem !important;
       font: sans-serig;
       text-align: center;
       top: 15%;
     }
+
     #cargo {
       width: 100%;
     }
@@ -113,6 +119,7 @@ body {
   }
     
   @media screen and (min-width: 768px) and ( max-width: 1590px){
+
     .main{
         margin-left: 40%; 
     }
@@ -132,6 +139,7 @@ body {
     .register-form{
         margin-top: 20%;
     }
+
     .btn-blue{
       width: 48%;
     }
@@ -164,5 +172,4 @@ body {
       margin-top: 20%;
   }
   }
-
   
