@@ -74,6 +74,14 @@ public class MedicoService {
         
 	}
 
+	public Boolean existeMedicoByID(int id) {
+       
+        if(getMedicoByID(id) != null)
+            return true;
+        
+        return false;
+	}
+
 
 
 

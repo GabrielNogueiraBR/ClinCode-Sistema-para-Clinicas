@@ -1,7 +1,8 @@
 package com.api.clincode.controller;
 
-import java.net.URI;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
 
 import com.api.clincode.entity.MedicoEntity;
 import com.api.clincode.service.MedicoService;
@@ -16,6 +17,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.util.UriComponents;
+import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/medicos")
@@ -23,7 +26,6 @@ public class MedicoController {
     
     @Autowired
     private MedicoService service;
-    private String location = "http://localhost:8080";
 
     @GetMapping()
     public List<MedicoEntity> getAllMedicos(){
@@ -43,12 +45,12 @@ public class MedicoController {
     }
 
     @PostMapping()
-    public ResponseEntity<Void> cadastraMedico(@ModelAttribute MedicoEntity medico){
+    public ResponseEntity<Void> cadastraMedico(@ModelAttribute MedicoEntity medico, HttpServletRequest request, UriComponentsBuilder builder){
         medico = service.cadastraMedico(medico);
 
         if(medico != null){
-            URI uri = URI.create(location+"/"+medico.getIdPessoa());
-            return ResponseEntity.created(uri).build();
+            UriComponents uriComponents = builder.path(request.getRequestURI() + "/" + medico.getIdPessoa()).build();
+            return ResponseEntity.created(uriComponents.toUri()).build();
         }
 
         return ResponseEntity.notFound().build();
@@ -67,6 +69,7 @@ public class MedicoController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletaMedicoByID(@PathVariable final int id){
+        
         Boolean existe = service.existeMedicoByID(id);
 
         if(existe == true)
