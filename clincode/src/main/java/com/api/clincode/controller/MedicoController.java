@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponents;
@@ -57,8 +58,8 @@ public class MedicoController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<MedicoEntity> alteraMedicoByID(@PathVariable final int id, @ModelAttribute MedicoEntity medico){
-        medico = service.alteraMedicoByID(id,medico);
+    public ResponseEntity<MedicoEntity> putMedicoByID(@PathVariable final int id, @RequestBody MedicoEntity medico){
+        medico = service.putMedicoByID(id,medico);
 
         if(medico != null){
             return ResponseEntity.ok(medico);

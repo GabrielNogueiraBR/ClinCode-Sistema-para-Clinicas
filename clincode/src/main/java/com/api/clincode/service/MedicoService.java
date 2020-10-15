@@ -39,7 +39,7 @@ public class MedicoService {
             return null;
 	}
 
-	public MedicoEntity alteraMedicoByID(int id, MedicoEntity medico) {
+	public MedicoEntity putMedicoByID(int id, MedicoEntity medico) {
         
         MedicoEntity auxiliar = getMedicoByID(id);
 
@@ -61,6 +61,9 @@ public class MedicoService {
             auxiliar.setTelefone1(medico.getTelefone1());
             auxiliar.setTelefone2(medico.getTelefone2());
             auxiliar.setTurno(medico.getTurno());
+            
+            repository.save(auxiliar);
+            
             return auxiliar;
         }
         else
