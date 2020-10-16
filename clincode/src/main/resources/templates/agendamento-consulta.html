@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/main.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>ClinCode | Agendamento</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="menubar navbar navbar-light justify-content-between">
+            <a class="navbar-brand">LOGO</a>
+            <form class="form-inline">
+                <a href="pacientes"class="menu-items">PACIENTES</a>
+                <a href="/index"class="menu-items">SAIR</a>
+            </form>
+          </nav>
+    </header>
+
+    <div class="content">
+        <div class="form-background">
+            <center><h3><b>AGENDAMENTO DE CONSULTAS</b></h3></center>
+            <hr style="border-color: rgb(64 117 255);"> <!--Tag 'hr' cria uma linha/risco-->
+
+            <form>
+                <div class="form-style">
+                    <div class="form-group">
+                        <label for="nome">Nome: </label>
+                        <input type="text" class="form-control" id="nome" placeholder="João da Silva" name="nome" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="email">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="joaosilva@mail.com" name="email" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="telefone1">Telefone</label>
+                            <input type="tel" class="form-control" id="telefone1" placeholder="(XX) 9 1234-1234" name="telefone1" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="data">Data</label>
+                            <input type="date" class="form-control" id="data" placeholder="12/12/2012" name="data" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="hora">Hora</label>
+                            <input type="time" class="form-control" id="hora" placeholder="12:12" name="hora" required>
+                        </div>
+                    </div>
+                    <div class="form-group">                        
+                        <label for="especialidade">Especialide</label>
+                        <input type="text" class="form-control" id="especialidade" placeholder="Especialide" name="especialidade" required>
+                    </div>
+
+                    <hr style="border-color: rgb(64 117 255);">
+
+                    <div class="btn-form">
+                        <button type="submit" class="btn btn-clin" style="margin-left: 10px;" value="">Agendar</button>
+                        <button type="submit" class="btn btn-outline-secondary">Limpar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <b style="float: right;margin-right: 20px;">@PA_FACENS2020-S04</b>
+    </footer>
+</body>
+</html>
