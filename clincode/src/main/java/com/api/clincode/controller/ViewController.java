@@ -30,5 +30,10 @@ public class ViewController {
     @GetMapping("cadastro/atendentes")
     public ModelAndView cadastroAtendente(){
         return new ModelAndView("cad-atendentes");
-    }    
+    }
+    
+    @GetMapping("admin")
+    public ModelAndView adminIndex(){
+        return new ModelAndView("admin");
+    }
 }
