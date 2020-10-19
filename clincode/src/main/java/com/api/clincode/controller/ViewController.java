@@ -26,4 +26,9 @@ public class ViewController {
     public ModelAndView cadastroMedico(){
         return new ModelAndView("cad-medico");
     }    
+
+    @GetMapping("cadastro/consulta")
+    public ModelAndView cadastroConsulta(){
+        return new ModelAndView("cad-consulta");
+    }
 }
