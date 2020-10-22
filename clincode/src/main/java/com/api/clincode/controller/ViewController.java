@@ -35,5 +35,10 @@ public class ViewController {
     @GetMapping("cadastro/agendamentos")
     public ModelAndView agendamentoConsulta() {
         return new ModelAndView("agendamento-consulta");
+    }    
+
+    @GetMapping("cadastro/consulta")
+    public ModelAndView cadastroConsulta(){
+        return new ModelAndView("cad-consulta");
     }
 }
