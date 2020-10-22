@@ -1,0 +1,67 @@
+:root{
+    --bg-admin: #1f252b;
+    --primary-admin: ;
+}
+
+img {
+    filter: brightness(90%);
+}
+
+.carousel-text{
+    font-size: 25px; 
+}
+
+.card{
+    margin: 0px 15px;
+    border: none;
+    height: 420px;
+}
+
+.card-body a{
+    font-weight: bold;
+}
+
+.card-title{
+    font-weight: bold;
+    color: #464646;
+    text-align: center;
+}
+
+.btn-card{
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* .content{
+    background-color: #1f252b;
+}
+
+.btn.btn-clin{
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: #343a40;
+}
+
+.btn.btn-clin:hover{
+    background-color: #13171b;
+}
+
+.menubar, a {
+    color: #fff;
+}
+
+.header .menu-items {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 70px;
+}
+
+footer{
+    padding-top: 40px;
+    bottom: 0;
+    height: 110px;
+    color: #fff;
+    background-color: #343a40;
+} */
+
+

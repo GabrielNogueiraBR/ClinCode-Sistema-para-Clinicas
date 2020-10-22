@@ -5,15 +5,39 @@ import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
 @PrimaryKeyJoinColumn(name="idPessoa")
-public class AtendenteEntity {
-    
-    private static final long serialVersionUID = 1L;
-    private String turno;
-    private String disponibilidade;
-    private String restricao;
+public class AtendenteEntity extends PessoaEntity {
 
-    public static long getSerialversionuid() {
-        return serialVersionUID;
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+    private String area;
+    private boolean grupoRisco;
+    private String patologiaGrupoRisco;
+    private String turno;
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
+    public boolean isGrupoRisco() {
+        return grupoRisco;
+    }
+
+    public void setGrupoRisco(boolean grupoRisco) {
+        this.grupoRisco = grupoRisco;
+    }
+
+    public String getPatologiaGrupoRisco() {
+        return patologiaGrupoRisco;
+    }
+
+    public void setPatologiaGrupoRisco(String patologiaGrupoRisco) {
+        this.patologiaGrupoRisco = patologiaGrupoRisco;
     }
 
     public String getTurno() {
@@ -24,20 +48,5 @@ public class AtendenteEntity {
         this.turno = turno;
     }
 
-    public String getDisponibilidade() {
-        return disponibilidade;
-    }
-
-    public void setDisponibilidade(String disponibilidade) {
-        this.disponibilidade = disponibilidade;
-    }
-
-    public String getRestricao() {
-        return restricao;
-    }
-
-    public void setRestricao(String restricao) {
-        this.restricao = restricao;
-    }   
-
+    
 }

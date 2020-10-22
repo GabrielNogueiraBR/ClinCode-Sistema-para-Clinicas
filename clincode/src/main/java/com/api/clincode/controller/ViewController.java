@@ -32,8 +32,23 @@ public class ViewController {
         return new ModelAndView("cad-atendentes");
     }
     
-    @GetMapping("agendamento")
+    @GetMapping("cadastro/agendamentos")
     public ModelAndView agendamentoConsulta() {
         return new ModelAndView("agendamento-consulta");
+    }    
+
+    @GetMapping("cadastro/consultas")
+    public ModelAndView cadastroConsulta(){
+        return new ModelAndView("cad-consulta");
+    }
+    
+    @GetMapping("admin")
+    public ModelAndView adminIndex(){
+        return new ModelAndView("admin");
+    }
+
+    @GetMapping("historico")
+    public ModelAndView historicoConsultas(){
+        return new ModelAndView("historico-consultas");
     }
 }
