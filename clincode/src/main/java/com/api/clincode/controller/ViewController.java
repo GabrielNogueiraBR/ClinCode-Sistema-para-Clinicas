@@ -40,5 +40,14 @@ public class ViewController {
     @GetMapping("cadastro/consultas")
     public ModelAndView cadastroConsulta(){
         return new ModelAndView("cad-consulta");
+    
+    @GetMapping("admin")
+    public ModelAndView adminIndex(){
+        return new ModelAndView("admin");
+    }
+
+    @GetMapping("historico")
+    public ModelAndView historicoConsultas(){
+        return new ModelAndView("historico-consultas");
     }
 }
