@@ -40,6 +40,7 @@ public class ViewController {
     @GetMapping("cadastro/consultas")
     public ModelAndView cadastroConsulta(){
         return new ModelAndView("cad-consulta");
+    }
     
     @GetMapping("admin")
     public ModelAndView adminIndex(){
