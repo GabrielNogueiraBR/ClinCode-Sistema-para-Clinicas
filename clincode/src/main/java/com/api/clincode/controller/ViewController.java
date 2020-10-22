@@ -32,7 +32,7 @@ public class ViewController {
         return new ModelAndView("cad-atendentes");
     }
     
-    @GetMapping("agendamento")
+    @GetMapping("cadastro/agendamentos")
     public ModelAndView agendamentoConsulta() {
         return new ModelAndView("agendamento-consulta");
     }
