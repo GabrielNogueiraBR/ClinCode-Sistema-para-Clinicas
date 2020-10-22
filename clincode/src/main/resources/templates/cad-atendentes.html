@@ -27,31 +27,71 @@
                 <div class="form-style">
                     <div class="form-group">
                         <label for="nome">Nome: </label>
-                        <input type="text" class="form-control" id="nome" placeholder="João da Silva">
+                        <input type="text" class="form-control" id="nome" placeholder="João da Silva" name="nome" required>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                         <label for="rg">RG:</label>
-                        <input type="number" class="form-control" id="rg" placeholder="12.345.678-9">
+                        <input type="text" class="form-control" id="rg" placeholder="RG" name="rg" required>
                         </div>
                         <div class="form-group col-md-6">
                         <label for="cpf">CPF:</label>
-                        <input type="number" class="form-control" id="cpf" placeholder="123.456.789-X">
+                        <input type="text" class="form-control" id="cpf" placeholder="123.456.789-01" name="cpf" required>
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-4">
                             <label for="dataNascimento">Data de Nascimento: </label>
-                            <input type="date" class="form-control" id="dateNascimento" placeholder="12/12/2012">
+                            <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required>
                         </div>
+                        <div class="form-group col-md-4">
+                            <label for="telefone1">Telefone 1: </label>
+                            <input type="text" class="form-control" id="telefone1" placeholder="(XX) 9 1234-1234" name="telefone1" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="telefone2">Telefone 2: </label>
+                            <input type="text" class="form-control" id="telefone2" placeholder="(XX) 9 1234-1234" name="telefone2" required> 
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="rua">Endereço:</label>
+                            <input type="text" class="form-control" id="rua" placeholder="R. Facens, 123" name="rua" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="bairro">Bairro: </label>
+                            <input type="text" class="form-control" id="bairro" placeholder="Jardim" name="bairro" required>
+                        </div>
+                    </div>    
+                    <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="telefone">Telefone: </label>
-                            <input type="text" class="form-control" id="telefone" placeholder="(XX) 9 1234-1234">
+                            <label for="cidade">Cidade:</label>
+                            <input type="text" class="form-control" id="cidade" placeholder="Sorocaba" name="cidade" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="estado">Estado:</label>
+                            <input type="text" class="form-control" id="estado" placeholder="SP" name="estado" required>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="numeroCasa">Numero da casa:</label>
+                            <input type="num" class="form-control" id="numeroCasa" placeholder="999" name="numeroCasa" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="text" class="form-control" id="email" placeholder="123@facens.br">
+                        <input type="email" class="form-control" id="email" placeholder="123@facens.br" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputConfirmEmail">Confirmar Email:</label>
+                        <input type="email" class="form-control" id="inputConfirmEmail" placeholder="123@facens.br" required>
+                    </div>    
+                    <div class="form-group">
+                        <label for="senha">Senha:</label>
+                        <input type="password" class="form-control" id="senha" placeholder="12345" name="senha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputConfirmSenha">Confirmar Senha: </label>
+                        <input type="password" class="form-control" id="inputConfirmSenha" placeholder="12345" required>
                     </div>
                     <div class="form-group">
                         <label for="inputArea">Área:</label>
@@ -60,8 +100,8 @@
                     <div class="form-group">
                         <label for="inputQuest">Apresenta alguma patologia que o impossibilita de agir no combate do covid-19?</label>
                         <div class="small-9 columns">
-                            <input type="checkbox" name="rbOp" value="Sim" style="margin: 10px;" />Sim 
-                            <input type="checkbox" name="rbOp" value="Não" style="margin-left: 10px; margin: 10px;" />Não
+                            <input type="radio" name="rbOp" value="Sim" style="margin: 10px;" />Sim 
+                            <input type="radio" name="rbOp" value="Não" style="margin-left: 10px; margin: 10px;" />Não
                         </div>
                     </div>
                     <div class="form-group">
