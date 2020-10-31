@@ -62,7 +62,7 @@ public class ConsultaController {
         if(consultaEntity == null)
             return ResponseEntity.notFound().build();
         
-        // consultaEntity = service.
+        consultaEntity = service.alteraInformacoesByConsulta(consultaEntity, entity);
         
         return ResponseEntity.ok(consultaEntity);
     }

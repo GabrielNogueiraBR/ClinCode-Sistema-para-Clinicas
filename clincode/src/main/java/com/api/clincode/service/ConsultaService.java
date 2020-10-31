@@ -32,9 +32,21 @@ public class ConsultaService {
         return repository.save(entity);
     }
 
-    // public ConsultaEntity alteraInformacoesByEntidade(ConsultaEntity destinoEntity, ConsultaEntity modificacoesEntity) {
+    public ConsultaEntity alteraInformacoesByEntidade(ConsultaEntity destinoEntity, ConsultaEntity modificacoesEntity) {
+        destinoEntity.setCrm(modificacoesEntity.getCrm());        
+        destinoEntity.setRg(modificacoesEntity.getRg());        
+        destinoEntity.setAlergia(modificacoesEntity.getAlergia());        
+        destinoEntity.setQueixa(modificacoesEntity.getQueixa());        
+        destinoEntity.setTempo(modificacoesEntity.getTempo());        
+        destinoEntity.setDiagnostico(modificacoesEntity.getDiagnostico());        
+        destinoEntity.setExameC(modificacoesEntity.getExameC());        
+        destinoEntity.setMedicacao(modificacoesEntity.getMedicacao());        
+        destinoEntity.setHabitos(modificacoesEntity.getHabitos());
         
-    // }
+        destinoEntity = repository.save(destinoEntity);
+
+        return destinoEntity;
+    }
 
     public boolean deleteConsultaByID(int id) {
         ConsultaEntity entity = getConsultaByID(id);
