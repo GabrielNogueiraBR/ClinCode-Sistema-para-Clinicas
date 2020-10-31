@@ -94,4 +94,14 @@ footer{
     font-size: 2.7rem;
     font: sans-serif;
     color: #4075FF;
+  }
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
 }
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+

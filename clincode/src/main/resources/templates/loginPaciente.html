@@ -25,6 +25,11 @@
 			alert("Digite uma senha!!");
 			return;
 		  }
+		  if (document.getElementById("cargo").value == 'op0')
+		  {
+			alert("Selecione seu cargo!!");
+			return;
+		  }
 		  window.location.href="index";		  
         };</script>
 
@@ -47,10 +52,22 @@
                  <div class="form-group">
                     <label>Senha</label>
                     <input type="password" class="form-control" id="password" name="password" placeholder="Digite seu Senha">
-                 </div>
-                 <button type="reset" class="btn btn-blue">Limpar</button>
-                 <button type="button" class="btn btn-secondary"onclick="validar()">Login</button>
-              </form>
+                 </div>  
+
+                 <div class="form-group">
+                  <div class="col-md-15">
+                     <select required name="cargo" id="cargo" class="btn btn-cargo">
+                        <option value="op0" onclick="validar()" selected>Cargo</option>       
+                        <option value="op1" onclick="validar()"> Paciente</option>
+                        <option value="op2" onclick="validar()"> Atendente</option>
+                        <option value="op3" onclick="validar()"> Médico</option>
+                        <option value="op4" onclick="validar()"> Controle de Acesso TI</option>
+                     </select>
+                        <button type="reset" class="btn btn-blue">Limpar</button>
+                        <button type="button" class="btn btn-secondary"onclick="validar()">Login</button>
+                  </div>
+               </div>
+               </form>
            </div>
         </div>
      </div>

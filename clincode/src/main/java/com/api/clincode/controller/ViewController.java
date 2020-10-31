@@ -8,28 +8,38 @@ import org.springframework.web.servlet.ModelAndView;
 public class ViewController {
     
     @GetMapping("index")
-    public ModelAndView paginaInicio(){
+    public ModelAndView paginaInicio() {
         return new ModelAndView("index");
     }
 
     @GetMapping("login")
-    public ModelAndView paginaLogin(){
+    public ModelAndView paginaLogin() {
         return new ModelAndView("loginPaciente");
     }
     
     @GetMapping("cadastro/pacientes")
-    public ModelAndView cadastroPaciente(){
+    public ModelAndView cadastroPaciente() {
         return new ModelAndView("cad-pacientes");
     }
 
     @GetMapping("cadastro/medicos")
-    public ModelAndView cadastroMedico(){
+    public ModelAndView cadastroMedico() {
         return new ModelAndView("cad-medico");
     }  
     
     @GetMapping("cadastro/atendentes")
-    public ModelAndView cadastroAtendente(){
+    public ModelAndView cadastroAtendente() {
         return new ModelAndView("cad-atendentes");
+    }
+    
+    @GetMapping("cadastro/agendamentos")
+    public ModelAndView agendamentoConsulta() {
+        return new ModelAndView("agendamento-consulta");
+    }    
+
+    @GetMapping("cadastro/consultas")
+    public ModelAndView cadastroConsulta(){
+        return new ModelAndView("cad-consulta");
     }
     
     @GetMapping("admin")
