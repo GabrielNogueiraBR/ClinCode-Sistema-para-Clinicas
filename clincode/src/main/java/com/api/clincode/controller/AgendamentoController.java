@@ -5,8 +5,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.api.clincode.entity.ConsultaEntity;
-import com.api.clincode.service.ConsultaService;
+import com.api.clincode.entity.AgendamentoEntity;
+import com.api.clincode.service.AgendamentoService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -23,55 +23,48 @@ import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
-@RequestMapping("/consultas")
-public class ConsultaController {
+@RequestMapping("/agendamentos")
+public class AgendamentoController {
     
     @Autowired
-    private ConsultaService service;
+    private AgendamentoService service;
 
-    @GetMapping()
-    public List<ConsultaEntity> getAllConsultas() {
-        return service.getAllConsultas();
+    @GetMapping
+    public List<AgendamentoEntity> getAllAgendamentos() {
+        return service.getAllAgendamentos();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ConsultaEntity> getConsultaByID(@PathVariable final int id) {
-        ConsultaEntity entity = service.getConsultaByID(id);
-
-        if(entity == null)
-            return ResponseEntity.notFound().build();
+    public ResponseEntity<AgendamentoEntity> getConsultaByID(@PathVariable final int id) {
+        AgendamentoEntity entity = service.getAgendamentoByID(id);
 
         return ResponseEntity.ok(entity);
     }
 
-    @PostMapping()
-    public ResponseEntity<Void> cadastrarConsulta(@ModelAttribute ConsultaEntity entity, HttpServletRequest request, UriComponentsBuilder builder) {
+    @PostMapping
+    public ResponseEntity<Void> postConsulta(@ModelAttribute AgendamentoEntity entity, HttpServletRequest request, UriComponentsBuilder builder) {  
         entity = service.cadastraConsulta(entity);
 
-        UriComponents uriComponents = builder.path(request.getRequestURI() + "/" + entity.getIdConsulta()).build();
-
+        UriComponents uriComponents = builder.path(request.getRequestURI() + "/" + entity.getIdAgendamento()).build();
+        
         URI uri = uriComponents.toUri();
 
         return ResponseEntity.created(uri).build();
     }
 
-    @PutMapping("{/id")
-    public ResponseEntity<ConsultaEntity> putConsultaByID(@PathVariable final int id, @RequestBody ConsultaEntity entity) {
-        ConsultaEntity consultaEntity = service.getConsultaByID(id);
+    @PutMapping("/{id}")
+    public ResponseEntity<AgendamentoEntity> putAgendamentoByID(@PathVariable final int id, @RequestBody AgendamentoEntity entity) {
+        AgendamentoEntity consultaEntity = service.getAgendamentoByID(id);
 
-        if(consultaEntity == null)
-            return ResponseEntity.notFound().build();
-        
         consultaEntity = service.alteraInformacoesByEntidade(consultaEntity, entity);
-        
+
         return ResponseEntity.ok(consultaEntity);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteConsultaById(@PathVariable final int id) {
-        if(service.deleteConsultaByID(id) == false)
-            return ResponseEntity.notFound().build();
-
+    public ResponseEntity<AgendamentoEntity> deleteAgendamentoByID(@PathVariable final int id) {
+        service.deleteAgendamentoByID(id);
+        
         return ResponseEntity.noContent().build();
     }
 
