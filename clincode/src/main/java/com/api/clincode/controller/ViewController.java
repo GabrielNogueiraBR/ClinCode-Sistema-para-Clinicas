@@ -51,4 +51,15 @@ public class ViewController {
     public ModelAndView historicoConsultas(){
         return new ModelAndView("historico-consultas");
     }
+
+    @GetMapping("paciente/consultas")
+    public ModelAndView pacienteIndex(){
+        return new ModelAndView("pacienteConsultas");
+    }
+
+    @GetMapping("paciente/perfil")
+    public ModelAndView pacientePerfil(){
+        return new ModelAndView("pacientePerfil");
+    }
+
 }
