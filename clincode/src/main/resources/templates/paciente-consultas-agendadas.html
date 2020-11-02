@@ -5,73 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/pacientes.css">
-    <link rel="stylesheet" href="/styles/historico.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Histórico de consultas</title>
+    <title>Consultas futuras</title>
 </head>
 <body>
     <header class="header">
         <nav class="menubar navbar navbar-light justify-content-between">
             <a class="navbar-brand">LOGO</a>
-            <form class="form-inline">                
-                <a href="/paciente/consultas"class="menu-items">CONSULTAS</a>
-                <a href="/paciente"class="menu-items">MEU PERFIL</a>
+            <form class="form-inline">
+                <a href="./historico"class="menu-items">CONSULTAS</a>
+                <a href="../perfil"class="menu-items">MEU PERFIL</a>
                 <a href="/index"class="menu-items">SAIR</a>
             </form>
           </nav>
     </header>
     <div class="content">
         <div class="form-background">
-            <center><h3><b>HISTÓRICO DE CONSULTAS</b></h3></center>
+            <center><h3><b>CONSULTAS FUTURAS</b></h3></center>
             <hr style="border-color: rgb(64 117 255);">
             
             <table class="table" id="tbEmpresas">
                 <thead>
                     <tr>
-                        <th>PACIENTE</th>
                         <th>DATA CONSULTA</th>
                         <th>HORARIO</th>
-                        <th>STATUS CONSULTA</th>
                         <th>MEDICO</th>
-                        <th>SOLICITAÇÃO</th>
+                        <th> - </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Raul Ryan</td>
-                        <td>20/10/2020</td>
+                        <td>20/01/2021</td>
                         <td>14:00</td>
-                        <td>Reagendada</td>
-                        <td>Dr. Gabriel Ferraz</td>
-                        <td>-</td>
+                        <td>Dr. Otavio Cordeiro</td>
+                        <td><button class="btn btn-clin">MAIS INFORMAÇÕES</button></td>
                     </tr>
                     
                     <tr>
-                        <td>Raul Ryan</td>
-                        <td>28/09/2020</td>
-                        <td>9:00</td>
-                        <td>Cancelada</td>
+                        <td>12/12/2020</td>
+                        <td>15:00</td>
                         <td>Dr. Gabriel Ferraz</td>
-                        <td>-</td>
+                        <td><button class="btn btn-clin">MAIS INFORMAÇÕES</button></td>
                     </tr>
 
-                    <tr>
-                        <td>Raul Ryan</td>
-                        <td>11/08/2020</td>
-                        <td>10:00</td>
-                        <td>Concluida</td>
-                        <td>Dr. Vitor Góes</td>
-                        <td>-</td>
-                    </tr>
                 </tbody>
             </table>
-            
             <div class="btn-form">
-                <button type="submit" class="btn btn-clin" style="margin-left: 10px;" value=""> Exportar dados</button>
-                <a href="/paciente/consultas" class="btn btn-clin" style="margin-left: 10px;">Consultas Futuras</a> 
-                
-
+                <a href="/historico" class="btn btn-clin" style="margin-left: 10px;"> Historico de Consultas</a> 
             </div>
         </div>
     </div>

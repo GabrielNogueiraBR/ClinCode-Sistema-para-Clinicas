@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -82,6 +83,16 @@ public class MedicoController {
             return ResponseEntity.notFound().build();
     }
 
+    //Pagina de perfil de cada medico
+    @GetMapping("{id}/perfil")
+    public ModelAndView medicoPerfil(@PathVariable final int id){
+        
+        //Buscar o medico correspondente do id
 
+        //Adicionar esse objeto no ModelAndView
+
+        //Exibir a tela de perfil        
+        return new ModelAndView("medico-perfil");
+    }
 
 }

@@ -9,6 +9,7 @@ import com.api.clincode.service.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -75,5 +76,45 @@ public class PacienteController {
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.notFound().build();
+    }
+
+    //Pagina de perfil de cada paciente
+    @GetMapping("{id}/perfil")
+    public ModelAndView medicoPerfil(@PathVariable final int id){
+        
+        //Buscar o paciente correspondente ao id
+
+        //Adicionar esse objeto no ModelAndView
+
+        //Exibir a tela de perfil        
+        return new ModelAndView("paciente-perfil");
+    }
+
+    //Exibir as CONSULTAS FUTURAS do paciente
+    @GetMapping("{id}/consultas/agendadas")
+    public ModelAndView pacienteIndex(){
+
+        //Buscar o paciente referente ao id
+
+        //Buscar as consultas AGENDADAS do paciente (List<>)
+
+        //Adicionar essa lista de consultas (caso tenha) ao ModelAndView para ser exibido dinamicamente
+
+        //Exibir a tela com as consultas agendadas
+        return new ModelAndView("paciente-consultas-agendadas");
+    }
+
+    //Exibir as consultas JA REALIZADAS do paciente
+    @GetMapping("{id}/consultas/historico")
+    public ModelAndView historicoConsultas(){
+        
+        //Buscar o paciente referente ao id
+
+        //Buscar as consultas do paciente (List<>)
+
+        //Adicionar essa lista de consultas (caso tenha) ao ModelAndView para ser exibido dinamicamente
+
+        //Exibir a tela com as CONSULTAS REALIZADAS
+        return new ModelAndView("paciente-consultas-historico");
     }
 }
