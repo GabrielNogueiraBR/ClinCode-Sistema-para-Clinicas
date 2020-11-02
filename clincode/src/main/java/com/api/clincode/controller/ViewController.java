@@ -47,25 +47,5 @@ public class ViewController {
         return new ModelAndView("admin");
     }
 
-    @GetMapping("historico")
-    public ModelAndView historicoConsultas(){
-        return new ModelAndView("historico-consultas");
-    }
     
-
-    @GetMapping("paciente/consultas")
-    public ModelAndView pacienteIndex(){
-        return new ModelAndView("paciente-consultas");
-    }
-
-    @GetMapping("paciente")
-    public ModelAndView pacientePerfil(){
-        return new ModelAndView("paciente-perfil");
-    }
-
-    @GetMapping("medico/consultas")
-    public ModelAndView medicoConsultas(){
-        return new ModelAndView("medico-consultas");
-    }
-
 }

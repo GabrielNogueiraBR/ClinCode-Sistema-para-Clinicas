@@ -23,20 +23,20 @@
         <div class="form-background">
             <center><h3><b>CADASTRO DE CONSULTA</b></h3></center>
             <hr style="border-color: rgb(64 117 255);">
-            <form>
+            <form th:action="@{/consultas}" method="POST">
                 <div class="form-style">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                        <label for="inputRG">RG do paciente:</label>
-                        <input type="text" class="form-control" id="inputRg" placeholder="RG">
+                        <label for="rg">RG do paciente:</label>
+                        <input type="text" class="form-control" id="rg" placeholder="RG" name="rg">
                         </div>
                         <div class="form-group col-md-6">
-                        <label for="inputCRM">CRM do médico:</label>
-                        <input type="text" class="form-control" id="inputCRM" placeholder="CRM">
+                        <label for="crm">CRM do médico:</label>
+                        <input type="text" class="form-control" id="crm" placeholder="CRM" name="crm">
                         </div>
                     </div>   
                     <div class="form-group">
-                        <label for="inputQuest">Voce Possui alguma alergia?</label>
+                        <label for="alergia">Voce Possui alguma alergia?</label>
                         <div class="small-9 columns">
                             <input type="radio" name="rbOp" value="Sim" style="margin: 10px;" />Sim 
                             <input type="radio" name="rbOp" value="Não" style="margin-left: 10px; margin: 10px;" />Não
@@ -44,21 +44,21 @@
                     </div> 
                     <div class="form-group">
                         <label for="inputAlerg">Se sim, qual alergia?</label>
-                        <input type="text" class="form-control" id="inputAlerg" placeholder="Picada de abelha, formiga, ...">
+                        <input type="text" class="form-control" id="inputAlerg" placeholder="Picada de abelha, formiga, ..." name="alergia">
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputQueixa">Qual a queixa do paciente: </label>
-                            <input type="text" class="form-control" id="inputQueixa" placeholder="Dor nas costas, ...">
+                            <input type="text" class="form-control" id="inputQueixa" placeholder="Dor nas costas, ..." name="queixa">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputTQueixa">Quanto tempo o paciente está se queixando do problema: </label>
-                            <input type="text" class="form-control" id="inputTQueixa" placeholder="Dias, Meses, ...">
+                            <input type="text" class="form-control" id="inputTQueixa" placeholder="Dias, Meses, ..." name="tempo">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputDiag">Diagnostico do paciente: </label>
-                        <input type="text" class="form-control" id="inputDiag" placeholder="Terminal, ...">
+                        <input type="text" class="form-control" id="inputDiag" placeholder="Terminal, fratura, alergia..." name="diagnostico">
                     </div>
                     <div class="form-group">
                         <label for="inputQuest">Será necessário exames adicionais?</label>
@@ -69,16 +69,21 @@
                     </div> 
                     <div class="form-group ">
                         <label for="inputExam">Se sim, qual exame?</label>
-                        <input type="text" class="form-control" id="inputExam" placeholder="X-ray, Colonoscopia">
+                        <input type="text" class="form-control" id="inputExam" placeholder="X-ray, Colonoscopia" name="exameC">
                     </div>
                     <div class="form-group ">
                         <label for="inputMed">Qual será a medicação do paciente?</label>
-                        <input type="text" class="form-control" id="inputMed" placeholder="Dipirona, Tilenol, Gardenal, ...">
+                        <input type="text" class="form-control" id="inputMed" placeholder="Dipirona, Tilenol, Gardenal, ..." name="medicacao">
                     </div>
                     <div class="form-group ">
                         <label for="inputHab">O paciente possui algum habito?</label>
-                        <input type="text" class="form-control" id="inputHab" placeholder="Cigarro, bebidas, ...">
+                        <input type="text" class="form-control" id="inputHab" placeholder="Cigarro, bebidas, ..." name="habitos">
                     </div>
+                </div>
+                <hr style="border-color: rgb(64 117 255);">
+                <div class="btn-form">
+                    <button type="submit" class="btn btn-clin" style="margin-left: 10px;">Cadastrar</button>
+                    <button type="submit" class="btn btn-outline-secondary">Limpar</button>
                 </div>
             </form>
         </div>

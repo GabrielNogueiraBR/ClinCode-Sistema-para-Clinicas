@@ -4,33 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/pacientes.css">
+    <link rel="stylesheet" href="/styles/medicos.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Meu Perfil</title>
+    <title>Perfil</title>
 </head>
 <body>
     <header class="header">
         <nav class="menubar navbar navbar-light justify-content-between">
             <a class="navbar-brand">LOGO</a>
             <form class="form-inline">
-                <a href="consultas/agendadas"class="menu-items">AGENDAMENTOS</a>
-                <a href="consultas/historico"class="menu-items">CONSULTAS</a>
-                <!-- <a href="/paciente"class="menu-items">MEU PERFIL</a> -->
+                <a href="/consultas/agendadas"class="menu-items">CONSULTAS</a>
+                <!-- <a href="/medico"class="menu-items">MEU PERFIL</a> -->
                 <a href="/index"class="menu-items">SAIR</a>
             </form>
           </nav>
     </header>
     <div class="content">
         <div class="form-background">
-            <!-- <center><h3><b>INFORMAÇÕES</b></h3></center>
-            <hr style="border-color: rgb(64 117 255);"> -->
+
             <div class="cabecalho">
                 
                 <div class="avatar"></div>
                 <div class="info">
                     <div class="nome">
-                        <h2>Raul Ryan Deaque Silva</h2>
+                        <h2>Doutor Gabriel José Ferraz Perin</h2>
                     </div>
                     <div class="documentos">
                         <b>RG: 12.123.123-1</b>
@@ -40,7 +38,7 @@
                 
             </div>
 
-            <form th:action="@{/pacientes}" method="POST">
+            <form th:action="@{/medicos}" method="POST">
                 <div class="form-style">
                     <div class="form-row">
                         <div class="form-group col-md-4">
@@ -58,7 +56,7 @@
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" placeholder="123@facens.br" value="raul@facens.br" name="email" required>
+                        <input type="email" class="form-control" id="email" placeholder="123@facens.br" value="gabriel@facens.br" name="email" required>
                     </div>  
                     <div class="form-row">
                         <div class="form-group col-md-8">
@@ -86,25 +84,21 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                        <label for="convenio">Convenio:</label>
-                        <input type="text" class="form-control" id="convenio" placeholder="Santa Casa" value="Santa Casa" name="convenio" disabled required>
+                        <label for="crm">CRM:</label>
+                        <input type="num" class="form-control" id="crm" placeholder="123456" value="1010" name="crm" disabled required>
                         </div>
-                        <div class="form-group col-md-4">
-                        <label for="numeroCarteirinha">Numero da Carteirinha:</label>
-                        <input type="num" class="form-control" id="numeroCarteirinha" placeholder="123456" value="123456" name="numeroCarteirinha" disabled required>
-                        </div>
-                        <div class="form-group col-md-2">
-                        <label for="tipoSanguineo">Tipo sanguíneo:</label>
-                        <input type="text" class="form-control" id="tipoSanguineo" placeholder="A+" value="A+" name="tipoSanguineo" disabled required>
-                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="turno">Turno:</label>
+                            <input type="text" class="form-control" id="turno" placeholder="Noturno" name="turno" disabled required>
+                            </div>
                     </div>                    
                     <div class="form-group">
-                        <label for="doencas">Doenças:</label>
-                        <input type="text" class="form-control" id="doencas" placeholder="Descreva aqui todas suas doenças (caso tenha)" value="Sinusite" name="doencas">
+                        <label for="especialidade-1">Especialidade 1:</label>
+                        <input type="text" class="form-control" id="esp1" placeholder="Clinico Geral" value="" name="esp1">
                     </div>
                     <div class="form-group">
-                        <label for="vicios">Vicios:</label>
-                        <input type="text" class="form-control" id="vicios" placeholder="Descreva aqui todos os seus vícios (caso tenha)" value="-" name="vicios">
+                        <label for="especialidade-2">Especialidade 2:</label>
+                        <input type="text" class="form-control" id="esp2" placeholder="Oftalmologista" value="" name="esp1">
                     </div>                      
                 </div>
             </form>
