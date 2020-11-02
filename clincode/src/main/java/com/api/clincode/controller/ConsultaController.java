@@ -55,7 +55,7 @@ public class ConsultaController {
         return ResponseEntity.created(uri).build();
     }
 
-    @PutMapping("{/id")
+    @PutMapping("/{id}")
     public ResponseEntity<ConsultaEntity> putConsultaByID(@PathVariable final int id, @RequestBody ConsultaEntity entity) {
         ConsultaEntity consultaEntity = service.getConsultaByID(id);
 
