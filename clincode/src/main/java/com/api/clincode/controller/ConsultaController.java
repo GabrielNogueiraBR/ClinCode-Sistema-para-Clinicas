@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -55,7 +56,7 @@ public class ConsultaController {
         return ResponseEntity.created(uri).build();
     }
 
-    @PutMapping("{/id")
+    @PutMapping("/{id}")
     public ResponseEntity<ConsultaEntity> putConsultaByID(@PathVariable final int id, @RequestBody ConsultaEntity entity) {
         ConsultaEntity consultaEntity = service.getConsultaByID(id);
 
@@ -73,6 +74,11 @@ public class ConsultaController {
             return ResponseEntity.notFound().build();
 
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/agendadas")
+    public ModelAndView medicoConsultas(){
+        return new ModelAndView("consultas-agendadas");
     }
 
 }

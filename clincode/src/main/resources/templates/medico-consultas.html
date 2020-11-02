@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/medicos.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Consultas agendadas</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="menubar navbar navbar-light justify-content-between">
+            <a class="navbar-brand">LOGO</a>
+            <form class="form-inline">
+                <a href="/medico/consultas"class="menu-items">CONSULTAS</a>
+                <a href="/medico"class="menu-items">MEU PERFIL</a>
+                <a href="/index"class="menu-items">SAIR</a>
+            </form>
+          </nav>
+    </header>
+    <div class="content">
+        <div class="form-background">
+            <center><h3><b>CONSULTAS AGENDADAS</b></h3></center>
+            <hr style="border-color: rgb(64 117 255);">
+            
+            <table class="table" id="tbEmpresas">
+                <thead>
+                    <tr>
+                        <th>PACIENTE</th>
+                        <th>HORARIO</th>
+                        <th> - </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Raul Ryan</td>
+                        <td>14:00</td>
+                        <td>
+                            <a href="/cadastro/consultas" class="btn btn-clin">Consultar</a>
+                            <button class="btn btn-outline-danger">Cancelar</button>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Otavio Cordeiro</td>
+                        <td>14:30</td>
+                        <td>
+                            
+                            <a href="/cadastro/consultas" class="btn btn-clin">Consultar</a>
+                            <button class="btn btn-outline-danger">Cancelar</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Gianluca Piva</td>
+                        <td>14:45</td>
+                        <td>
+                            <a href="/cadastro/consultas" class="btn btn-clin">Consultar</a>
+                            <button class="btn btn-outline-danger">Cancelar</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer class="footer">
+        <b style="float: right;margin-right: 20px;">@PA_FACENS2020-S04</b>
+    </footer>
+</body>
+</html>

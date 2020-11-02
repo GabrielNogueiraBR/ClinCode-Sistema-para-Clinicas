@@ -24,7 +24,7 @@
             <center><h3><b>AGENDAMENTO DE CONSULTAS</b></h3></center>
             <hr style="border-color: rgb(64 117 255);"> <!--Tag 'hr' cria uma linha/risco-->
 
-            <form>
+            <form th:action="@{/agendamentos}" method="POST">
                 <div class="form-style">
                     <div class="form-group">
                         <label for="nome">Nome: </label>

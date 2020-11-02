@@ -2,6 +2,33 @@
     padding: 50px 10%;
 }
 
+.avatar{
+    width: 150px;
+    height: 150px;
+    background-image: url(../assets/001-man.svg);
+    background-size: 100%;
+    background-color: #e7f2ff;
+    border-radius: 5%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cabecalho{
+    display: flex;
+    align-items: center;
+    margin: 20px 0px 40px 50px;
+}
+.info{
+    padding-left: 30px;
+}
+.info .documentos{
+    display: flex;
+    justify-content: center;
+}
+.info .documentos b{
+    margin-left: 15px;
+}
+
 @media(max-width: 768px){
     .content{
         padding: 50px 5%;
@@ -10,5 +37,24 @@
     .form-style {
         padding: 5px 5%;
     }
-    
+    .avatar{
+        margin-bottom: 15px;
+    }
+    .cabecalho{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .info{
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .info h2{
+        font-size: 25px;
+    }
+    .info .documentos b{
+        margin: 0px 5px 0px 5px;
+    }
+
+
 }

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/medicos.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Perfil</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="menubar navbar navbar-light justify-content-between">
+            <a class="navbar-brand">LOGO</a>
+            <form class="form-inline">
+                <a href="/consultas/agendadas"class="menu-items">CONSULTAS</a>
+                <!-- <a href="/medico"class="menu-items">MEU PERFIL</a> -->
+                <a href="/index"class="menu-items">SAIR</a>
+            </form>
+          </nav>
+    </header>
+    <div class="content">
+        <div class="form-background">
+
+            <div class="cabecalho">
+                
+                <div class="avatar"></div>
+                <div class="info">
+                    <div class="nome">
+                        <h2>Doutor Gabriel José Ferraz Perin</h2>
+                    </div>
+                    <div class="documentos">
+                        <b>RG: 12.123.123-1</b>
+                        <b>CPF: 123.123.123-01</b>
+                    </div>
+                </div>
+                
+            </div>
+
+            <form th:action="@{/medicos}" method="POST">
+                <div class="form-style">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="dataNascimento">Data de Nascimento: </label>
+                            <input type="date" class="form-control" id="dataNascimento" value="2001-01-30" name="dataNascimento" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="telefone1">Telefone 1: </label>
+                            <input type="text" class="form-control" id="telefone1" placeholder="(XX) 9 1234-1234" value="(XX) 9 1234-1234" name="telefone1" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="telefone2">Telefone 2: </label>
+                            <input type="text" class="form-control" id="telefone2" placeholder="(XX) 9 1234-1234" value="(XX) 9 1234-1234" name="telefone2" required> 
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="123@facens.br" value="gabriel@facens.br" name="email" required>
+                    </div>  
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="rua">Endereço:</label>
+                            <input type="text" class="form-control" id="rua" placeholder="R. Facens, 123" value="R. Aurora Redini, 123" name="rua" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="bairro">Bairro: </label>
+                            <input type="text" class="form-control" id="bairro" placeholder="Jardim" value="Jardim" name="bairro" required>
+                        </div>
+                    </div>    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" class="form-control" id="cidade" placeholder="Sorocaba" value="Sorocaba" name="cidade" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                        <label for="estado">Estado:</label>
+                        <input type="text" class="form-control" id="estado" placeholder="SP" value="SP" name="estado" required>
+                        </div>
+                        <div class="form-group col-md-2">
+                        <label for="numeroCasa">Numero da casa:</label>
+                        <input type="num" class="form-control" id="numeroCasa" placeholder="999" value="111" name="numeroCasa" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                        <label for="crm">CRM:</label>
+                        <input type="num" class="form-control" id="crm" placeholder="123456" value="1010" name="crm" disabled required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="turno">Turno:</label>
+                            <input type="text" class="form-control" id="turno" placeholder="Noturno" name="turno" disabled required>
+                            </div>
+                    </div>                    
+                    <div class="form-group">
+                        <label for="especialidade-1">Especialidade 1:</label>
+                        <input type="text" class="form-control" id="esp1" placeholder="Clinico Geral" value="" name="esp1">
+                    </div>
+                    <div class="form-group">
+                        <label for="especialidade-2">Especialidade 2:</label>
+                        <input type="text" class="form-control" id="esp2" placeholder="Oftalmologista" value="" name="esp1">
+                    </div>                      
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <b style="float: right;margin-right: 20px;">@PA_FACENS2020-S04</b>
+    </footer>
+</body>
+</html>

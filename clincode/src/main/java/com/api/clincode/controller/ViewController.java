@@ -47,8 +47,5 @@ public class ViewController {
         return new ModelAndView("admin");
     }
 
-    @GetMapping("historico")
-    public ModelAndView historicoConsultas(){
-        return new ModelAndView("historico-consultas");
-    }
+    
 }
