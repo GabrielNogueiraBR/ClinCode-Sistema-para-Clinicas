@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/consulta.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>ClinCode</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="menubar navbar navbar-light justify-content-between">
+            <a class="navbar-brand">LOGO</a>
+            <form class="form-inline">
+                <a href="\medico\consultas"class="menu-items">CONSULTAS</a>
+                <a href="\index"class="menu-items">SAIR</a>
+            </form>
+          </nav>
+    </header>
+    <div class="content">
+        <div class="form-background">
+            <center><h3><b>CADASTRO DE CONSULTA</b></h3></center>
+            <hr style="border-color: rgb(64 117 255);">
+            <form>
+                <div class="form-style">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                        <label for="inputRG">RG do paciente:</label>
+                        <input type="text" class="form-control" id="inputRg" placeholder="RG">
+                        </div>
+                        <div class="form-group col-md-6">
+                        <label for="inputCRM">CRM do médico:</label>
+                        <input type="text" class="form-control" id="inputCRM" placeholder="CRM">
+                        </div>
+                    </div>   
+                    <div class="form-group">
+                        <label for="inputQuest">Voce Possui alguma alergia?</label>
+                        <div class="small-9 columns">
+                            <input type="radio" name="rbOp" value="Sim" style="margin: 10px;" />Sim 
+                            <input type="radio" name="rbOp" value="Não" style="margin-left: 10px; margin: 10px;" />Não
+                        </div>
+                    </div> 
+                    <div class="form-group">
+                        <label for="inputAlerg">Se sim, qual alergia?</label>
+                        <input type="text" class="form-control" id="inputAlerg" placeholder="Picada de abelha, formiga, ...">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputQueixa">Qual a queixa do paciente: </label>
+                            <input type="text" class="form-control" id="inputQueixa" placeholder="Dor nas costas, ...">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputTQueixa">Quanto tempo o paciente está se queixando do problema: </label>
+                            <input type="text" class="form-control" id="inputTQueixa" placeholder="Dias, Meses, ...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDiag">Diagnostico do paciente: </label>
+                        <input type="text" class="form-control" id="inputDiag" placeholder="Terminal, ...">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputQuest">Será necessário exames adicionais?</label>
+                        <div class="small-9 columns">
+                            <input type="radio" name="rbOp" value="Sim" style="margin: 10px;" />Sim 
+                            <input type="radio" name="rbOp" value="Não" style="margin-left: 10px; margin: 10px;" />Não
+                        </div>
+                    </div> 
+                    <div class="form-group ">
+                        <label for="inputExam">Se sim, qual exame?</label>
+                        <input type="text" class="form-control" id="inputExam" placeholder="X-ray, Colonoscopia">
+                    </div>
+                    <div class="form-group ">
+                        <label for="inputMed">Qual será a medicação do paciente?</label>
+                        <input type="text" class="form-control" id="inputMed" placeholder="Dipirona, Tilenol, Gardenal, ...">
+                    </div>
+                    <div class="form-group ">
+                        <label for="inputHab">O paciente possui algum habito?</label>
+                        <input type="text" class="form-control" id="inputHab" placeholder="Cigarro, bebidas, ...">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> 
+    <footer class="footer">
+        <b style="float: right;margin-right: 20px;">@PA_FACENS2020-S04</b>
+    </footer>
+</body>
+</html>

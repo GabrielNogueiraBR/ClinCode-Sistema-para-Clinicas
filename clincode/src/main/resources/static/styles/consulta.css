@@ -1,0 +1,13 @@
+.content{
+    padding: 50px 10%;
+}
+
+@media(max-width: 768px){
+    .content{
+        padding: 50px 5%;
+    }
+
+    .form-style {
+        padding: 5px 5%;
+    }
+}

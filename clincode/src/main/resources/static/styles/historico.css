@@ -1,0 +1,8 @@
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    background-image: url(../assets/userM.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
