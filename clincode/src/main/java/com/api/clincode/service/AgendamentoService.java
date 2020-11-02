@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 import com.api.clincode.entity.AgendamentoEntity;
-import com.api.clincode.entity.ConsultaEntity;
 import com.api.clincode.repository.AgendamentoRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
