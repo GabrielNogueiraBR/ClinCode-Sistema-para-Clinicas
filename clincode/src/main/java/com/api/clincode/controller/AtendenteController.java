@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -83,4 +84,16 @@ public class AtendenteController {
         
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/{id}/perfil")
+    public ModelAndView atendentePefil(@PathVariable int id) {
+        //Buscar o paciente referente ao id
+
+        //Buscar as consultas do paciente (List<>)
+
+        //Adicionar essa lista de consultas (caso tenha) ao ModelAndView para ser exibido dinamicamente
+
+        //Exibir a tela com as CONSULTAS REALIZADAS
+        return new ModelAndView("atendente-perfil");
+    } 
 }
