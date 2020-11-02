@@ -67,5 +67,9 @@ public class ViewController {
     public ModelAndView medicoConsultas(){
         return new ModelAndView("medico-consultas");
     }
+    @GetMapping("medico")
+    public ModelAndView medicoPerfil(){
+        return new ModelAndView("medico-perfil");
+    }
 
 }
