@@ -80,14 +80,18 @@ public class PacienteController {
 
     //Pagina de perfil de cada paciente
     @GetMapping("{id}/perfil")
-    public ModelAndView medicoPerfil(@PathVariable final int id){
+    public ModelAndView pacientePerfil(@PathVariable final int id){
         
         //Buscar o paciente correspondente ao id
 
         //Adicionar esse objeto no ModelAndView
 
+        ModelAndView mv = new ModelAndView("paciente-perfil");
+        mv.addObject("paciente", service.getPacienteByID(id));
+        return mv;
+
         //Exibir a tela de perfil        
-        return new ModelAndView("paciente-perfil");
+        // return new ModelAndView("paciente-perfil");
     }
 
     //Exibir as CONSULTAS FUTURAS do paciente

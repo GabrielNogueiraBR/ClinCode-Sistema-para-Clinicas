@@ -93,7 +93,11 @@ public class AtendenteController {
 
         //Adicionar essa lista de consultas (caso tenha) ao ModelAndView para ser exibido dinamicamente
 
+        ModelAndView mv = new ModelAndView("atendente-perfil");
+        mv.addObject("atendente", service.getAtendenteByID(id));
+        return mv;
+
         //Exibir a tela com as CONSULTAS REALIZADAS
-        return new ModelAndView("atendente-perfil");
+        // return new ModelAndView("atendente-perfil");
     } 
 }
