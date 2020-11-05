@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -21,6 +22,7 @@ public class AgendamentoEntity {
     private String horario;
 
     @ManyToOne
+    @JoinColumn(name="ID_PACIENTE")
     private PacienteEntity paciente;
 
     public int getIdAgendamento() {
