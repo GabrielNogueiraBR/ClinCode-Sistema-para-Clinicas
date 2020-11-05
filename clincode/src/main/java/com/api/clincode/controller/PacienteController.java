@@ -27,12 +27,12 @@ public class PacienteController {
     private PacienteService service;
 
     @GetMapping()
-    public List<PacienteEntity> getAllPacientes(){
+    public List<PacienteEntity> getAllPacientes() {
         return service.getAllPacientes();
     }
     
     @GetMapping("/{id}")
-    public ResponseEntity<PacienteEntity> getPacienteByID(@PathVariable final int id){
+    public ResponseEntity<PacienteEntity> getPacienteByID(@PathVariable final int id) {
         PacienteEntity paciente;
         paciente = service.getPacienteByID(id);
 
@@ -43,7 +43,7 @@ public class PacienteController {
     }
 
     @PostMapping()
-    public ResponseEntity<Void> postPaciente(@ModelAttribute PacienteEntity entity){
+    public ResponseEntity<Void> postPaciente(@ModelAttribute PacienteEntity entity) {
         entity = service.salvarPaciente(entity);
 
         if(entity != null)
@@ -56,7 +56,7 @@ public class PacienteController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<PacienteEntity> putPacienteByID(@PathVariable int id, @RequestBody PacienteEntity paciente){
+    public ResponseEntity<PacienteEntity> putPacienteByID(@PathVariable int id, @RequestBody PacienteEntity paciente) {
        
         paciente = service.putPacienteByID(id, paciente);
 
@@ -68,7 +68,7 @@ public class PacienteController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletePacienteByID(@PathVariable int id){
+    public ResponseEntity<Void> deletePacienteByID(@PathVariable int id) {
         Boolean val = service.existePacienteByID(id);
 
         if(val == true){
@@ -80,23 +80,17 @@ public class PacienteController {
 
     //Pagina de perfil de cada paciente
     @GetMapping("{id}/perfil")
-    public ModelAndView pacientePerfil(@PathVariable final int id){
-        
-        //Buscar o paciente correspondente ao id
-
-        //Adicionar esse objeto no ModelAndView
-
+    public ModelAndView pacientePerfil(@PathVariable final int id) {
         ModelAndView mv = new ModelAndView("paciente-perfil");
-        mv.addObject("paciente", service.getPacienteByID(id));
-        return mv;
 
-        //Exibir a tela de perfil        
-        // return new ModelAndView("paciente-perfil");
+        mv.addObject("paciente", service.getPacienteByID(id));
+
+        return mv;
     }
 
     //Exibir as CONSULTAS FUTURAS do paciente
     @GetMapping("{id}/consultas/agendadas")
-    public ModelAndView pacienteIndex(){
+    public ModelAndView pacienteConsultasAgendadas() {
 
         //Buscar o paciente referente ao id
 
@@ -110,7 +104,7 @@ public class PacienteController {
 
     //Exibir as consultas JA REALIZADAS do paciente
     @GetMapping("{id}/consultas/historico")
-    public ModelAndView historicoConsultas(){
+    public ModelAndView historicoConsultasHistorico() {
         
         //Buscar o paciente referente ao id
 

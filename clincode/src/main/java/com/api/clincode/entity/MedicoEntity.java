@@ -7,9 +7,6 @@ import javax.persistence.PrimaryKeyJoinColumn;
 @PrimaryKeyJoinColumn(name="idPessoa")
 public class MedicoEntity extends PessoaEntity{
 
-    /**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private String crm;
 	private String turno;

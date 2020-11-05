@@ -1,26 +1,37 @@
 package com.api.clincode.entity;
 
+import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 
-
 @Entity
-@PrimaryKeyJoinColumn(name="idPessoa")
-public class PacienteEntity extends PessoaEntity{
+@PrimaryKeyJoinColumn(name = "idPessoa")
+public class PacienteEntity extends PessoaEntity {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
-    private String  tipoSanguineo;
-    private String  convenio;
-    private int     numeroCarteirinha;
-    private String  vicios;
-    private String  doencas;
+    private String tipoSanguineo;
+    private String convenio;
+    private int numeroCarteirinha;
+    private String vicios;
+    private String doencas;
+
+    @OneToMany
+    @JoinColumn(name="ID_PACIENTE")
+    private List<AgendamentoEntity> agendamentos;
 
     public String getTipoSanguineo() {
         return tipoSanguineo;
+    }
+
+    public List<AgendamentoEntity> getAgendamentos() {
+        return agendamentos;
+    }
+
+    public void setAgendamentos(List<AgendamentoEntity> agendamentos) {
+        this.agendamentos = agendamentos;
     }
 
     public void setTipoSanguineo(String tipoSanguineo) {
