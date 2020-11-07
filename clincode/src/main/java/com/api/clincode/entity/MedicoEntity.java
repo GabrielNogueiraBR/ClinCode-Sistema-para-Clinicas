@@ -1,5 +1,6 @@
 package com.api.clincode.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 
@@ -8,6 +9,8 @@ import javax.persistence.PrimaryKeyJoinColumn;
 public class MedicoEntity extends PessoaEntity{
 
 	private static final long serialVersionUID = 1L;
+	
+	@Column(unique = true)
 	private String crm;
 	private String turno;
 	private String especialidade1;
