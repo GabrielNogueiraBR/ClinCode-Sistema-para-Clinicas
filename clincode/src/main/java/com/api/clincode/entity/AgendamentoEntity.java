@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class AgendamentoEntity {
 
@@ -18,6 +20,7 @@ public class AgendamentoEntity {
     private String data;
     private String horario;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name="ID_PACIENTE")
     private PacienteEntity paciente;
