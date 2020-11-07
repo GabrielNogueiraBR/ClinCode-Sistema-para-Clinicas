@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class ConsultaEntity {
@@ -21,6 +23,14 @@ public class ConsultaEntity {
     private String exameC;
     private String medicacao;
     private String habitos;
+
+    @ManyToOne
+    @JoinColumn(name = "ID_PACIENTE")
+    private PacienteEntity paciente;
+    
+    @ManyToOne
+    @JoinColumn(name = "ID_MEDICO")
+    private MedicoEntity medico;
 
     public int getIdConsulta() {
         return idConsulta;

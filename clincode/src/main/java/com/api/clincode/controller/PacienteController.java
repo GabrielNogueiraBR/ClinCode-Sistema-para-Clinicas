@@ -3,13 +3,19 @@ package com.api.clincode.controller;
 import java.net.URI;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
+import com.api.clincode.entity.AgendamentoEntity;
 import com.api.clincode.entity.PacienteEntity;
+import com.api.clincode.service.AgendamentoService;
 import com.api.clincode.service.PacienteService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.util.UriComponents;
+import org.springframework.web.util.UriComponentsBuilder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -25,6 +31,9 @@ public class PacienteController {
     
     @Autowired
     private PacienteService service;
+
+    @Autowired
+    private AgendamentoService agendamentoService;
 
     @GetMapping()
     public List<PacienteEntity> getAllPacientes() {
@@ -114,5 +123,26 @@ public class PacienteController {
 
         //Exibir a tela com as CONSULTAS REALIZADAS
         return new ModelAndView("paciente-consultas-historico");
+    }
+
+
+    /**
+     * Esse metodo vai fazer o cadastramento de Agendamento de Consultas com base no {@code id} do paciente passado via a URL de cadastro. Dessa forma podemos relacionar um agendamento com o Paciente que abriu aquele agendamento.
+     * @param id do paciente que esta realizando o agendamento.
+     * @param entity objeto AgendamentoEntity que sera preenchido junto com o form.
+     * @param request
+     * @param builder
+     * @return
+     */
+    @PostMapping("/{id}/cadastro/agendamentos")
+    public ResponseEntity<Void> cadastraAgendamentoConsulta(@PathVariable int id, @ModelAttribute AgendamentoEntity entity, HttpServletRequest request, UriComponentsBuilder builder) {  
+
+        entity = agendamentoService.cadastraConsulta(id, entity);
+
+        UriComponents uriComponents = builder.path(request.getRequestURI() + "/" + entity.getIdAgendamento()).build();
+        
+        URI uri = uriComponents.toUri();
+
+        return ResponseEntity.created(uri).build();
     }
 }

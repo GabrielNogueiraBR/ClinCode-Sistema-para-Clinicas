@@ -1,8 +1,14 @@
 package com.api.clincode.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
+
+
 
 @Entity
 @PrimaryKeyJoinColumn(name="idPessoa")
@@ -15,6 +21,10 @@ public class MedicoEntity extends PessoaEntity{
 	private String turno;
 	private String especialidade1;
 	private String especialidade2;
+
+	@OneToMany
+	@JoinColumn(name = "ID_MEDICO")
+	private List<ConsultaEntity> consultas;
 
 	public String getCrm() {
 		return crm;

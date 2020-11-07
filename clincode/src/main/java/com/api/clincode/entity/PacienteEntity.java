@@ -22,6 +22,10 @@ public class PacienteEntity extends PessoaEntity {
     @JoinColumn(name="ID_PACIENTE")
     private List<AgendamentoEntity> agendamentos;
 
+    @OneToMany
+    @JoinColumn(name = "ID_PACIENTE")
+    private List<ConsultaEntity> consultas;
+
     public String getTipoSanguineo() {
         return tipoSanguineo;
     }
@@ -70,6 +74,14 @@ public class PacienteEntity extends PessoaEntity {
         this.doencas = doencas;
     }
 
+    public List<ConsultaEntity> getConsultas() {
+        return consultas;
+    }
+
+    public void setConsultas(List<ConsultaEntity> consultas) {
+        this.consultas = consultas;
+    }
+    
     //metodo criado para a utilizacao no PUT
     public void setAtributosByObject(PacienteEntity entity){
         this.numeroCarteirinha = entity.getNumeroCarteirinha();
