@@ -21,17 +21,17 @@ public class AgendamentoService {
         return repository.findAll();
     }
 
-	public AgendamentoEntity getAgendamentoByID(int id) {
+    public AgendamentoEntity getAgendamentoByID(int id) {
         Optional<AgendamentoEntity> op = repository.findById(id);
         
         return op.orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Agendamento sem registros"));
-	}
+    }
 
-	public AgendamentoEntity cadastraConsulta(AgendamentoEntity entity) {
-		return repository.save(entity);
-	}
+    public AgendamentoEntity cadastraConsulta(AgendamentoEntity entity) {
+	    return repository.save(entity);
+    }
 
-	public AgendamentoEntity alteraInformacoesByEntidade(AgendamentoEntity destinoEntity, AgendamentoEntity modificacoesEntity) {
+    public AgendamentoEntity alteraInformacoesByEntidade(AgendamentoEntity destinoEntity, AgendamentoEntity modificacoesEntity) {
         destinoEntity.setNome(modificacoesEntity.getNome());
         destinoEntity.setTelefone(modificacoesEntity.getTelefone());
         destinoEntity.setEmail(modificacoesEntity.getEmail());
@@ -42,14 +42,14 @@ public class AgendamentoService {
         destinoEntity = repository.save(destinoEntity);
 
         return destinoEntity;
-	}
+    }
 
-	public boolean deleteAgendamentoByID(int id) {
+    public boolean deleteAgendamentoByID(int id) {
         AgendamentoEntity entity = getAgendamentoByID(id);
-        
+                
         repository.delete(entity);
 
         return true;
-	}
+    }
 
 }

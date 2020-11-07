@@ -91,8 +91,13 @@ public class MedicoController {
 
         //Adicionar esse objeto no ModelAndView
 
-        //Exibir a tela de perfil        
-        return new ModelAndView("medico-perfil");
+        //Exibir a tela de perfil
+        
+        ModelAndView mv = new ModelAndView("medico-perfil");
+        mv.addObject("medico", service.getMedicoByID(id));
+        return mv;
+        
+        // return new ModelAndView("medico-perfil");
     }
 
 }

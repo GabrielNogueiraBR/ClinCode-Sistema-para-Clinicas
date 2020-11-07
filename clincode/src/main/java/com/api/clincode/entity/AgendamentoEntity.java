@@ -4,10 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class AgendamentoEntity {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idAgendamento;
@@ -19,8 +21,20 @@ public class AgendamentoEntity {
     private String data;
     private String horario;
 
+    @ManyToOne
+    @JoinColumn(name="ID_PACIENTE")
+    private PacienteEntity paciente;
+
     public int getIdAgendamento() {
         return idAgendamento;
+    }
+
+    public PacienteEntity getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(PacienteEntity paciente) {
+        this.paciente = paciente;
     }
 
     public void setIdAgendamento(int idAgendamento) {
@@ -74,7 +88,5 @@ public class AgendamentoEntity {
     public void setHorario(String horario) {
         this.horario = horario;
     }
-
-    
 
 }
