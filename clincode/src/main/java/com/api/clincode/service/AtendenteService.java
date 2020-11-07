@@ -7,7 +7,9 @@ import com.api.clincode.entity.AtendenteEntity;
 import com.api.clincode.repository.AtendenteRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class AtendenteService {
@@ -23,14 +25,7 @@ public class AtendenteService {
         
                 Optional<AtendenteEntity> optional = repository.findById(id);
                 
-                
-                if(optional.isPresent()) 
-                        return optional.get();
-
-                return null;
-                
-                
-
+                return optional.orElseThrow( ()-> new ResponseStatusException(HttpStatus.NOT_FOUND, "Atendente nao cadastrado") ) ;
 	}
 
 	public AtendenteEntity cadastraAtendente(AtendenteEntity entity) {

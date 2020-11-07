@@ -7,7 +7,9 @@ import com.api.clincode.entity.ConsultaEntity;
 import com.api.clincode.repository.ConsultaRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class ConsultaService {
@@ -22,10 +24,7 @@ public class ConsultaService {
     public ConsultaEntity getConsultaByID(int id) {
         Optional<ConsultaEntity> optional = repository.findById(id);
 
-        if(optional.isPresent())
-            return optional.get();
-
-        return null;
+        return optional.orElseThrow( ()-> new ResponseStatusException(HttpStatus.NOT_FOUND,"Consulta nao cadastrada.") ) ;
     }
 
     public ConsultaEntity cadastraConsulta(ConsultaEntity entity) {
