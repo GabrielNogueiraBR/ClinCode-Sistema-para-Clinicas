@@ -145,4 +145,11 @@ public class PacienteController {
 
         return ResponseEntity.created(uri).build();
     }
+
+    @GetMapping("/{id}/cadastro/agendamentos")
+    public ModelAndView agendamentoConsulta(@PathVariable int id) {
+        //valida se o paciente existe, caso contrario retorna o erro 404
+        service.getPacienteByID(id);
+        return new ModelAndView("agendamento-consulta");
+    }    
 }

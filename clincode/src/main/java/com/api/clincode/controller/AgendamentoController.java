@@ -2,7 +2,6 @@ package com.api.clincode.controller;
 
 import java.util.List;
 
-
 import com.api.clincode.entity.AgendamentoEntity;
 import com.api.clincode.service.AgendamentoService;
 
@@ -50,5 +49,4 @@ public class AgendamentoController {
         
         return ResponseEntity.noContent().build();
     }
-
 }

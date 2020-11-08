@@ -29,39 +29,22 @@
                 <thead>
                     <tr>
                         <th>PACIENTE</th>
+                        <th>DATA</th>
                         <th>HORARIO</th>
-                        <th> - </th>
+                        <th>ESPECIALIDADE</th>
+                        <th>AÇÕES</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Raul Ryan</td>
-                        <td>14:00</td>
+                    <tr th:each="agendamento : ${agendamentos}">
+                        <td th:text="${agendamento.paciente.nome}"></td>
+                        <td th:text="${agendamento.data}"></td>
+                        <td th:text="${agendamento.horario}"></td>
+                        <td th:text="${agendamento.especialidade}"></td>
                         <td>
-                            <a href="/cadastro/consultas" class="btn btn-clin">Consultar</a>
-                            <button class="btn btn-outline-danger">Cancelar</button>
-                        </td>
+                            <a th:href="@{ 'agendadas/' + ${agendamento.idAgendamento} + '/consultar' }" class="btn btn-clin">Consultar</a>
+                        </td> 
                     </tr>
-                    
-                    <tr>
-                        <td>Otavio Cordeiro</td>
-                        <td>14:30</td>
-                        <td>
-                            
-                            <a href="/cadastro/consultas" class="btn btn-clin">Consultar</a>
-                            <button class="btn btn-outline-danger">Cancelar</button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Gianluca Piva</td>
-                        <td>14:45</td>
-                        <td>
-                            <a href="/cadastro/consultas" class="btn btn-clin">Consultar</a>
-                            <button class="btn btn-outline-danger">Cancelar</button>
-                        </td>
-                    </tr>
-
                 </tbody>
             </table>
         </div>

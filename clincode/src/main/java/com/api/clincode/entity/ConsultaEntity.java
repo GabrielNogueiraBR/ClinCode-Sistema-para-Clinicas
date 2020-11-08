@@ -14,8 +14,6 @@ public class ConsultaEntity {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int idConsulta;
 
-    private String crm;
-    private String rg;
     private String alergia;
     private String queixa;
     private String tempo;
@@ -38,22 +36,6 @@ public class ConsultaEntity {
 
     public void setIdConsulta(int idConsulta) {
         this.idConsulta = idConsulta;
-    }
-
-    public String getCrm() {
-        return crm;
-    }
-
-    public void setCrm(String crm) {
-        this.crm = crm;
-    }
-
-    public String getRg() {
-        return rg;
-    }
-
-    public void setRg(String rg) {
-        this.rg = rg;
     }
 
     public String getAlergia() {
@@ -110,6 +92,22 @@ public class ConsultaEntity {
 
     public void setHabitos(String habitos) {
         this.habitos = habitos;
+    }
+
+    public PacienteEntity getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(PacienteEntity paciente) {
+        this.paciente = paciente;
+    }
+
+    public MedicoEntity getMedico() {
+        return medico;
+    }
+
+    public void setMedico(MedicoEntity medico) {
+        this.medico = medico;
     }
 
 }
