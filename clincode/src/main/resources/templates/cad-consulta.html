@@ -23,20 +23,10 @@
         <div class="form-background">
             <center><h3><b>CADASTRO DE CONSULTA</b></h3></center>
             <hr style="border-color: rgb(64 117 255);">
-            <form th:action="@{/consultas}" method="POST">
+            <form th:action="@{consultar}" method="POST">
                 <div class="form-style">
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                        <label for="rg">RG do paciente:</label>
-                        <input type="text" class="form-control" id="rg" placeholder="RG" name="rg">
-                        </div>
-                        <div class="form-group col-md-6">
-                        <label for="crm">CRM do médico:</label>
-                        <input type="text" class="form-control" id="crm" placeholder="CRM" name="crm">
-                        </div>
-                    </div>   
                     <div class="form-group">
-                        <label for="alergia">Voce Possui alguma alergia?</label>
+                        <label for="alergia">O paciente possui alguma alergia?</label>
                         <div class="small-9 columns">
                             <input type="radio" name="rbOp" value="Sim" style="margin: 10px;" />Sim 
                             <input type="radio" name="rbOp" value="Não" style="margin-left: 10px; margin: 10px;" />Não

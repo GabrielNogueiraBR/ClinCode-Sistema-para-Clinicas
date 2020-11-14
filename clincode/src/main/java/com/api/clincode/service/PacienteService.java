@@ -1,12 +1,15 @@
 package com.api.clincode.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.api.clincode.entity.PacienteEntity;
 import com.api.clincode.repository.PacienteRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class PacienteService {
@@ -23,14 +26,9 @@ public class PacienteService {
 	}
 
 	public PacienteEntity getPacienteByID(int id) {
-		PacienteEntity paciente;
+		Optional<PacienteEntity> paciente = repository.findById(id);
 
-		if(repository.findById(id).isPresent()){
-			paciente = repository.findById(id).get();	
-			return paciente;
-		}
-		else
-			return null;
+		return paciente.orElseThrow( ()-> new ResponseStatusException(HttpStatus.NOT_FOUND, "Paciente nao cadastrado.") );
 	}
 
 	public PacienteEntity putPacienteByID(int id, PacienteEntity paciente) {

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.api.clincode.entity.AgendamentoEntity;
+import com.api.clincode.entity.PacienteEntity;
 import com.api.clincode.repository.AgendamentoRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,9 @@ public class AgendamentoService {
     @Autowired
     private AgendamentoRepository repository;
 
+    @Autowired
+    private PacienteService pacienteService;
+
     public List<AgendamentoEntity> getAllAgendamentos() {
         return repository.findAll();
     }
@@ -27,14 +31,23 @@ public class AgendamentoService {
         return op.orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Agendamento sem registros"));
     }
 
-    public AgendamentoEntity cadastraConsulta(AgendamentoEntity entity) {
-	    return repository.save(entity);
+    /**
+     * Esse metodo realizara o cadastro da consulta em nosso banco de dados utilizando o AgendamentoRepository.
+     * @author Gabriel Nogueira
+     * @param id do paciente que sera utilizado para recuperar o objeto PacienteEntity caso este exista, caso contrario, sera exibida a mensagem de 404 (Not Found)
+     * @param entity entidade AgendamentoEntity que sera salva.
+     * @return o retorno sera o objeto salvo.
+     */
+    public AgendamentoEntity cadastraConsulta(int id, AgendamentoEntity entity) {
+        
+        PacienteEntity paciente = pacienteService.getPacienteByID(id);
+        entity.setPaciente(paciente);
+
+        return repository.save(entity);
     }
 
     public AgendamentoEntity alteraInformacoesByEntidade(AgendamentoEntity destinoEntity, AgendamentoEntity modificacoesEntity) {
-        destinoEntity.setNome(modificacoesEntity.getNome());
-        destinoEntity.setTelefone(modificacoesEntity.getTelefone());
-        destinoEntity.setEmail(modificacoesEntity.getEmail());
+        destinoEntity.setPaciente(modificacoesEntity.getPaciente());
         destinoEntity.setEspecialidade(modificacoesEntity.getEspecialidade());
         destinoEntity.setData(modificacoesEntity.getData());
         destinoEntity.setHorario(modificacoesEntity.getHorario());

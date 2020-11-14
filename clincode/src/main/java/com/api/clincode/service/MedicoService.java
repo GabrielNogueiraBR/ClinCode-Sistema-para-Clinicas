@@ -7,7 +7,9 @@ import com.api.clincode.entity.MedicoEntity;
 import com.api.clincode.repository.MedicoRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class MedicoService {
@@ -22,11 +24,7 @@ public class MedicoService {
 	public MedicoEntity getMedicoByID(int id) {
         Optional<MedicoEntity> medico = repository.findById(id);
         
-        if(medico.isPresent()){
-            return medico.get();
-        }
-        else
-            return null;
+        return medico.orElseThrow( ()-> new ResponseStatusException(HttpStatus.NOT_FOUND, "Medico nao cadastrado.") );
 	}
 
 	public MedicoEntity cadastraMedico(MedicoEntity medico) {
