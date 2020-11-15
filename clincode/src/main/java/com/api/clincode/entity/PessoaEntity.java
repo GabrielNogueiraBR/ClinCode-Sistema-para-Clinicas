@@ -2,6 +2,7 @@ package com.api.clincode.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,7 +23,11 @@ public class PessoaEntity implements Serializable{
     private int idPessoa;
     private String nome;
     private String dataNascimento;
+
+    @Column(unique = true)
     private String rg;
+
+    @Column(unique = true)
     private String cpf;
     private String email;
     private String telefone1;

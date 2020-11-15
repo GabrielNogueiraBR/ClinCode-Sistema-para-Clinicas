@@ -24,22 +24,8 @@
             <center><h3><b>AGENDAMENTO DE CONSULTAS</b></h3></center>
             <hr style="border-color: rgb(64 117 255);"> <!--Tag 'hr' cria uma linha/risco-->
 
-            <form th:action="@{/agendamentos}" method="POST">
+            <form th:action="@{agendamentos}" method="POST">
                 <div class="form-style">
-                    <div class="form-group">
-                        <label for="nome">Nome: </label>
-                        <input type="text" class="form-control" id="nome" placeholder="João da Silva" name="nome" required>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="email">E-mail</label>
-                            <input type="email" class="form-control" id="email" placeholder="joaosilva@mail.com" name="email" required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="telefone1">Telefone</label>
-                            <input type="tel" class="form-control" id="telefone1" placeholder="(XX) 9 1234-1234" name="telefone" required>
-                        </div>
-                    </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="data">Data</label>

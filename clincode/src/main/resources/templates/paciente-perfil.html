@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/styles/pacientes.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Meu Perfil</title>
+    <title>Perfil | Paciente</title>
 </head>
 <body>
     <header class="header">
@@ -30,82 +30,93 @@
                 <div class="avatar"></div>
                 <div class="info">
                     <div class="nome">
-                        <h2>Raul Ryan Deaque Silva</h2>
+                        <!-- <h2><input type="text" class="nomePerfil" id="nome" th:value="${paciente.nome}" name="nome" disabled></h2> -->
+                        <h2 th:text="${paciente.nome}"></h2>
                     </div>
                     <div class="documentos">
-                        <b>RG: 12.123.123-1</b>
-                        <b>CPF: 123.123.123-01</b>
+                        <label for="rg"><strong>RG:</strong></label>
+                        <b th:text="${paciente.rg}"></b>
+                        &emsp;
+                        <!-- <b><input type="text" class="rgCpfPerfil" id="rg" th:value="${paciente.rg}" name="rg" disabled></b> -->
+                        <label for="cpf"><strong>CPF:</strong></label>
+                        <b th:text="${paciente.cpf}"></b>
+                        <!-- <b><input type="text" class="rgCpfPerfil" id="cpf" th:value="${paciente.cpf}" name="cpf" disabled></b> -->
                     </div>
                 </div>
                 
             </div>
 
-            <form th:action="@{/pacientes}" method="POST">
+            <form th:action="@{/pacientes}" method="PUT">
                 <div class="form-style">
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="dataNascimento">Data de Nascimento: </label>
-                            <input type="date" class="form-control" id="dataNascimento" value="2001-01-30" name="dataNascimento" required>
+                            <input type="date" class="form-control" id="dataNascimento" th:value="${paciente.dataNascimento}" name="dataNascimento" disabled>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="telefone1">Telefone 1: </label>
-                            <input type="text" class="form-control" id="telefone1" placeholder="(XX) 9 1234-1234" value="(XX) 9 1234-1234" name="telefone1" required>
+                            <input type="text" class="form-control" id="telefone1" placeholder="-" th:value="${paciente.telefone1}" name="telefone1">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="telefone2">Telefone 2: </label>
-                            <input type="text" class="form-control" id="telefone2" placeholder="(XX) 9 1234-1234" value="(XX) 9 1234-1234" name="telefone2" required> 
+                            <input type="text" class="form-control" id="telefone2" placeholder="-" th:value="${paciente.telefone2}" name="telefone2"> 
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" placeholder="123@facens.br" value="raul@facens.br" name="email" required>
+                        <input type="email" class="form-control" id="email" placeholder="-" th:value="${paciente.email}" name="email">
                     </div>  
                     <div class="form-row">
                         <div class="form-group col-md-8">
                             <label for="rua">Endereço:</label>
-                            <input type="text" class="form-control" id="rua" placeholder="R. Facens, 123" value="R. Aurora Redini, 123" name="rua" required>
+                            <input type="text" class="form-control" id="rua" placeholder="-" th:value="${paciente.rua}" name="rua">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="bairro">Bairro: </label>
-                            <input type="text" class="form-control" id="bairro" placeholder="Jardim" value="Jardim" name="bairro" required>
+                            <input type="text" class="form-control" id="bairro" placeholder="-" th:value="${paciente.bairro}" name="bairro">
                         </div>
                     </div>    
                     <div class="form-row">
                         <div class="form-group col-md-6">
                         <label for="cidade">Cidade:</label>
-                        <input type="text" class="form-control" id="cidade" placeholder="Sorocaba" value="Sorocaba" name="cidade" required>
+                        <input type="text" class="form-control" id="cidade" placeholder="-" th:value="${paciente.cidade}" name="cidade">
                         </div>
                         <div class="form-group col-md-4">
                         <label for="estado">Estado:</label>
-                        <input type="text" class="form-control" id="estado" placeholder="SP" value="SP" name="estado" required>
+                        <input type="text" class="form-control" id="estado" placeholder="-" th:value="${paciente.estado}" name="estado">
                         </div>
                         <div class="form-group col-md-2">
                         <label for="numeroCasa">Numero da casa:</label>
-                        <input type="num" class="form-control" id="numeroCasa" placeholder="999" value="111" name="numeroCasa" required>
+                        <input type="num" class="form-control" id="numeroCasa" placeholder="-" th:value="${paciente.numeroCasa}" name="numeroCasa">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                         <label for="convenio">Convenio:</label>
-                        <input type="text" class="form-control" id="convenio" placeholder="Santa Casa" value="Santa Casa" name="convenio" disabled required>
+                        <input type="text" class="form-control" id="convenio" placeholder="-" th:value="${paciente.convenio}" name="convenio" disabled>
                         </div>
                         <div class="form-group col-md-4">
                         <label for="numeroCarteirinha">Numero da Carteirinha:</label>
-                        <input type="num" class="form-control" id="numeroCarteirinha" placeholder="123456" value="123456" name="numeroCarteirinha" disabled required>
+                        <input type="num" class="form-control" id="numeroCarteirinha" placeholder="-" th:value="${paciente.numeroCarteirinha}" name="numeroCarteirinha" disabled>
                         </div>
                         <div class="form-group col-md-2">
                         <label for="tipoSanguineo">Tipo sanguíneo:</label>
-                        <input type="text" class="form-control" id="tipoSanguineo" placeholder="A+" value="A+" name="tipoSanguineo" disabled required>
+                        <input type="text" class="form-control" id="tipoSanguineo" placeholder="-" th:value="${paciente.tipoSanguineo}" name="tipoSanguineo" disabled>
                         </div>
                     </div>                    
                     <div class="form-group">
                         <label for="doencas">Doenças:</label>
-                        <input type="text" class="form-control" id="doencas" placeholder="Descreva aqui todas suas doenças (caso tenha)" value="Sinusite" name="doencas">
+                        <input type="text" class="form-control" id="doencas" placeholder="-" th:value="${paciente.doencas}" name="doencas" disabled>
                     </div>
                     <div class="form-group">
                         <label for="vicios">Vicios:</label>
-                        <input type="text" class="form-control" id="vicios" placeholder="Descreva aqui todos os seus vícios (caso tenha)" value="-" name="vicios">
+                        <input type="text" class="form-control" id="vicios" placeholder="-" th:value="${paciente.vicios}" name="vicios" disabled>
                     </div>                      
+                </div>
+                <hr style="border-color: rgb(64 117 255);">
+                <div class="btn-form">
+                    <button type="submit" class="btn btn-clin" style="margin-left: 10px;" value="">Cadastrar</button>
+                    <button type="submit" class="btn btn-outline-secondary">Limpar</button>
                 </div>
             </form>
         </div>

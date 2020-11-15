@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class ConsultaEntity {
@@ -12,8 +14,6 @@ public class ConsultaEntity {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int idConsulta;
 
-    private String crm;
-    private String rg;
     private String alergia;
     private String queixa;
     private String tempo;
@@ -22,28 +22,20 @@ public class ConsultaEntity {
     private String medicacao;
     private String habitos;
 
+    @ManyToOne
+    @JoinColumn(name = "ID_PACIENTE")
+    private PacienteEntity paciente;
+    
+    @ManyToOne
+    @JoinColumn(name = "ID_MEDICO")
+    private MedicoEntity medico;
+
     public int getIdConsulta() {
         return idConsulta;
     }
 
     public void setIdConsulta(int idConsulta) {
         this.idConsulta = idConsulta;
-    }
-
-    public String getCrm() {
-        return crm;
-    }
-
-    public void setCrm(String crm) {
-        this.crm = crm;
-    }
-
-    public String getRg() {
-        return rg;
-    }
-
-    public void setRg(String rg) {
-        this.rg = rg;
     }
 
     public String getAlergia() {
@@ -100,6 +92,22 @@ public class ConsultaEntity {
 
     public void setHabitos(String habitos) {
         this.habitos = habitos;
+    }
+
+    public PacienteEntity getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(PacienteEntity paciente) {
+        this.paciente = paciente;
+    }
+
+    public MedicoEntity getMedico() {
+        return medico;
+    }
+
+    public void setMedico(MedicoEntity medico) {
+        this.medico = medico;
     }
 
 }

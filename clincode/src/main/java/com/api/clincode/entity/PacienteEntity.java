@@ -1,26 +1,41 @@
 package com.api.clincode.entity;
 
+import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 
-
 @Entity
-@PrimaryKeyJoinColumn(name="idPessoa")
-public class PacienteEntity extends PessoaEntity{
+@PrimaryKeyJoinColumn(name = "idPessoa")
+public class PacienteEntity extends PessoaEntity {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
-    private String  tipoSanguineo;
-    private String  convenio;
-    private int     numeroCarteirinha;
-    private String  vicios;
-    private String  doencas;
+    private String tipoSanguineo;
+    private String convenio;
+    private int numeroCarteirinha;
+    private String vicios;
+    private String doencas;
+
+    @OneToMany
+    @JoinColumn(name="ID_PACIENTE")
+    private List<AgendamentoEntity> agendamentos;
+
+    @OneToMany
+    @JoinColumn(name = "ID_PACIENTE")
+    private List<ConsultaEntity> consultas;
 
     public String getTipoSanguineo() {
         return tipoSanguineo;
+    }
+
+    public List<AgendamentoEntity> getAgendamentos() {
+        return agendamentos;
+    }
+
+    public void setAgendamentos(List<AgendamentoEntity> agendamentos) {
+        this.agendamentos = agendamentos;
     }
 
     public void setTipoSanguineo(String tipoSanguineo) {
@@ -59,6 +74,14 @@ public class PacienteEntity extends PessoaEntity{
         this.doencas = doencas;
     }
 
+    public List<ConsultaEntity> getConsultas() {
+        return consultas;
+    }
+
+    public void setConsultas(List<ConsultaEntity> consultas) {
+        this.consultas = consultas;
+    }
+    
     //metodo criado para a utilizacao no PUT
     public void setAtributosByObject(PacienteEntity entity){
         this.numeroCarteirinha = entity.getNumeroCarteirinha();

@@ -4,20 +4,26 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class AgendamentoEntity {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idAgendamento;
 
-    private String nome;
-    private String telefone;
-    private String email;
     private String especialidade;
     private String data;
     private String horario;
+
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name="ID_PACIENTE")
+    private PacienteEntity paciente;
 
     public int getIdAgendamento() {
         return idAgendamento;
@@ -25,30 +31,6 @@ public class AgendamentoEntity {
 
     public void setIdAgendamento(int idAgendamento) {
         this.idAgendamento = idAgendamento;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getEspecialidade() {
@@ -75,6 +57,11 @@ public class AgendamentoEntity {
         this.horario = horario;
     }
 
-    
+    public PacienteEntity getPaciente() {
+        return paciente;
+    }
 
+    public void setPaciente(PacienteEntity paciente) {
+        this.paciente = paciente;
+    }
 }

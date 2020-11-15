@@ -1,10 +1,14 @@
 package com.api.clincode.controller;
 
+import java.net.URI;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.api.clincode.entity.ConsultaEntity;
 import com.api.clincode.entity.MedicoEntity;
+import com.api.clincode.service.AgendamentoService;
+import com.api.clincode.service.ConsultaService;
 import com.api.clincode.service.MedicoService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,16 +31,22 @@ import org.springframework.web.util.UriComponentsBuilder;
 public class MedicoController {
     
     @Autowired
-    private MedicoService service;
+    private MedicoService medicoService;
+
+    @Autowired
+    private AgendamentoService agendamentoService;
+
+    @Autowired
+    private ConsultaService consultaService;
 
     @GetMapping()
     public List<MedicoEntity> getAllMedicos(){
-        return service.getAllMedicos();
+        return medicoService.getAllMedicos();
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<MedicoEntity> getMedicoByID(@PathVariable final int id){
-        MedicoEntity medico = service.getMedicoByID(id);
+        MedicoEntity medico = medicoService.getMedicoByID(id);
 
         if(medico != null){
             return ResponseEntity.ok(medico);
@@ -48,7 +58,7 @@ public class MedicoController {
 
     @PostMapping()
     public ResponseEntity<Void> cadastraMedico(@ModelAttribute MedicoEntity medico, HttpServletRequest request, UriComponentsBuilder builder){
-        medico = service.cadastraMedico(medico);
+        medico = medicoService.cadastraMedico(medico);
 
         if(medico != null){
             UriComponents uriComponents = builder.path(request.getRequestURI() + "/" + medico.getIdPessoa()).build();
@@ -60,7 +70,7 @@ public class MedicoController {
 
     @PutMapping("/{id}")
     public ResponseEntity<MedicoEntity> putMedicoByID(@PathVariable final int id, @RequestBody MedicoEntity medico){
-        medico = service.putMedicoByID(id,medico);
+        medico = medicoService.putMedicoByID(id,medico);
 
         if(medico != null){
             return ResponseEntity.ok(medico);
@@ -72,11 +82,11 @@ public class MedicoController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletaMedicoByID(@PathVariable final int id){
         
-        Boolean existe = service.existeMedicoByID(id);
+        Boolean existe = medicoService.existeMedicoByID(id);
 
         if(existe == true)
         {
-            service.deletaMedicoByID(id);
+            medicoService.deletaMedicoByID(id);
             return ResponseEntity.noContent().build();
         }
         else
@@ -91,8 +101,46 @@ public class MedicoController {
 
         //Adicionar esse objeto no ModelAndView
 
-        //Exibir a tela de perfil        
-        return new ModelAndView("medico-perfil");
+        //Exibir a tela de perfil
+        
+        ModelAndView mv = new ModelAndView("medico-perfil");
+        mv.addObject("medico", medicoService.getMedicoByID(id));
+        return mv;
+        
+        // return new ModelAndView("medico-perfil");
     }
 
+    //Mostra todas as consultas que foram agendadas
+    @GetMapping("/{id}/consultas/agendadas")
+    public ModelAndView medicoConsultas(){
+        
+        //pegar a lista de consultas agendadas
+        ModelAndView consultasAgendadas = new ModelAndView("consultas-agendadas");
+
+        consultasAgendadas.addObject("agendamentos", agendamentoService.getAllAgendamentos());
+        
+        return consultasAgendadas;
+    }
+
+    @GetMapping("/{id}/consultas/agendadas/{idAgendamento}/consultar")
+    public ModelAndView consultarPaciente(@PathVariable int id, @PathVariable int idAgendamento){
+        //verifica se existe o medico
+        medicoService.getMedicoByID(id);
+
+        //verifica se existe o agendamento
+        agendamentoService.getAgendamentoByID(idAgendamento);
+        return new ModelAndView("cad-consulta");
+    }
+
+    @PostMapping("/{idMedico}/consultas/agendadas/{idAgendamento}/consultar")
+    public ResponseEntity<Void> cadastraConsulta(@ModelAttribute ConsultaEntity entity, @PathVariable int idMedico, @PathVariable int idAgendamento, HttpServletRequest request, UriComponentsBuilder builder) {
+        
+        entity = consultaService.cadastraConsulta(entity, idMedico, idAgendamento);
+
+        UriComponents uriComponents = builder.path(request.getRequestURI() + "/" + entity.getIdConsulta()).build();
+
+        URI uri = uriComponents.toUri();
+
+        return ResponseEntity.created(uri).build();
+    }
 }

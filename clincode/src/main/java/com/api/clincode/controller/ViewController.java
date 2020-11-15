@@ -6,7 +6,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class ViewController {
-    
+
     @GetMapping("index")
     public ModelAndView paginaInicio() {
         return new ModelAndView("index");
@@ -30,16 +30,6 @@ public class ViewController {
     @GetMapping("cadastro/atendentes")
     public ModelAndView cadastroAtendente() {
         return new ModelAndView("cad-atendentes");
-    }
-    
-    @GetMapping("cadastro/agendamentos")
-    public ModelAndView agendamentoConsulta() {
-        return new ModelAndView("agendamento-consulta");
-    }    
-
-    @GetMapping("cadastro/consultas")
-    public ModelAndView cadastroConsulta(){
-        return new ModelAndView("cad-consulta");
     }
     
     @GetMapping("admin")
