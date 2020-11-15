@@ -99,16 +99,20 @@ public class PacienteController {
 
     //Exibir as CONSULTAS FUTURAS do paciente
     @GetMapping("{id}/consultas/agendadas")
-    public ModelAndView pacienteConsultasAgendadas() {
+    public ModelAndView pacienteConsultasAgendadas(@PathVariable int id) {
 
         //Buscar o paciente referente ao id
+        PacienteEntity paciente = service.getPacienteByID(id);
 
         //Buscar as consultas AGENDADAS do paciente (List<>)
+        List<AgendamentoEntity> agendamentos = agendamentoService.getAgendamentoByPaciente(paciente);
 
         //Adicionar essa lista de consultas (caso tenha) ao ModelAndView para ser exibido dinamicamente
+        ModelAndView mv = new ModelAndView("paciente-consultas-agendadas");
+        mv.addObject("agendamento", agendamentos);
 
         //Exibir a tela com as consultas agendadas
-        return new ModelAndView("paciente-consultas-agendadas");
+        return mv;
     }
 
     //Exibir as consultas JA REALIZADAS do paciente
