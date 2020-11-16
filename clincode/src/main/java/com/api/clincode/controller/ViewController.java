@@ -14,7 +14,7 @@ public class ViewController {
 
     @GetMapping("login")
     public ModelAndView paginaLogin() {
-        return new ModelAndView("loginPaciente");
+        return new ModelAndView("login");
     }
     
     @GetMapping("cadastro/pacientes")

@@ -41,7 +41,7 @@ public class UsuarioController {
     
     @GetMapping("/login")
     public ModelAndView redirecionaLogin(){
-        ModelAndView mv = new ModelAndView("loginPaciente");
+        ModelAndView mv = new ModelAndView("login");
         return mv;
     }
 
