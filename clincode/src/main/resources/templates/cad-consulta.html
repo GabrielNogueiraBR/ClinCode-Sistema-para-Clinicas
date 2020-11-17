@@ -23,7 +23,7 @@
         <div class="form-background">
             <center><h3><b>CADASTRO DE CONSULTA</b></h3></center>
             <hr style="border-color: rgb(64 117 255);">
-            <form th:action="@{/consultar}" method="POST">
+            <form th:action="@{consultar}" method="POST">
                 <div class="form-style">
                     <div class="form-group">
                         <label for="alergia">O paciente possui alguma alergia?</label>
@@ -34,21 +34,21 @@
                     </div> 
                     <div class="form-group">
                         <label for="inputAlerg">Se sim, qual alergia?</label>
-                        <input type="text" class="form-control" id="inputAlerg" placeholder="Picada de abelha, formiga, ..." name="alergia">
+                        <input type="text" class="form-control" id="alergia" placeholder="Picada de abelha, formiga, ..." name="alergia">
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputQueixa">Qual a queixa do paciente: </label>
-                            <input type="text" class="form-control" id="inputQueixa" placeholder="Dor nas costas, ..." name="queixa">
+                            <input type="text" class="form-control" id="queixa" placeholder="Dor nas costas, ..." name="queixa">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputTQueixa">Quanto tempo o paciente está se queixando do problema: </label>
-                            <input type="text" class="form-control" id="inputTQueixa" placeholder="Dias, Meses, ..." name="tempo">
+                            <input type="text" class="form-control" id="tempo" placeholder="Dias, Meses, ..." name="tempo">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputDiag">Diagnostico do paciente: </label>
-                        <input type="text" class="form-control" id="inputDiag" placeholder="Terminal, fratura, alergia..." name="diagnostico">
+                        <input type="text" class="form-control" id="diagnostico" placeholder="Terminal, fratura, alergia..." name="diagnostico">
                     </div>
                     <div class="form-group">
                         <label for="inputQuest">Será necessário exames adicionais?</label>
@@ -59,15 +59,15 @@
                     </div> 
                     <div class="form-group ">
                         <label for="inputExam">Se sim, qual exame?</label>
-                        <input type="text" class="form-control" id="inputExam" placeholder="X-ray, Colonoscopia" name="exameC">
+                        <input type="text" class="form-control" id="exameC" placeholder="X-ray, Colonoscopia" name="exameC">
                     </div>
                     <div class="form-group ">
                         <label for="inputMed">Qual será a medicação do paciente?</label>
-                        <input type="text" class="form-control" id="inputMed" placeholder="Dipirona, Tilenol, Gardenal, ..." name="medicacao">
+                        <input type="text" class="form-control" id="medicacao" placeholder="Dipirona, Tilenol, Gardenal, ..." name="medicacao">
                     </div>
                     <div class="form-group ">
                         <label for="inputHab">O paciente possui algum habito?</label>
-                        <input type="text" class="form-control" id="inputHab" placeholder="Cigarro, bebidas, ..." name="habitos">
+                        <input type="text" class="form-control" id="habitos" placeholder="Cigarro, bebidas, ..." name="habitos">
                     </div>
                 </div>
                 <hr style="border-color: rgb(64 117 255);">
@@ -77,7 +77,8 @@
                 </div>
             </form>
         </div>
-    </div> 
+    </div>
+
     <footer class="footer">
         <b style="float: right;margin-right: 20px;">@PA_FACENS2020-S04</b>
     </footer>
