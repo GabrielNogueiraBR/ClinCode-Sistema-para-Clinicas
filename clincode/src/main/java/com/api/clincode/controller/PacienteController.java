@@ -23,8 +23,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
@@ -69,16 +67,18 @@ public class PacienteController {
             return ResponseEntity.notFound().build();
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<PacienteEntity> putPacienteByID(@PathVariable int id, @RequestBody PacienteEntity paciente) {
-       
+    @PostMapping("{id}/editar")
+    public ModelAndView putPacienteByID(@PathVariable int id, @ModelAttribute PacienteEntity paciente) {
+        
         paciente = service.putPacienteByID(id, paciente);
-
+        
         if(paciente != null){
-            return ResponseEntity.ok(paciente);
+            ModelAndView mv = new ModelAndView("paciente-perfil");
+            mv.addObject("paciente", paciente);
+            return mv;
         }
 
-        return ResponseEntity.notFound().build();
+        return new ModelAndView("index");
     }
 
     @DeleteMapping("/{id}")
