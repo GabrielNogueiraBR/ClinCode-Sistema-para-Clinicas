@@ -1,5 +1,6 @@
 package com.api.clincode.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,6 +35,18 @@ public class ConsultaService {
         Optional<ConsultaEntity> optional = repository.findById(id);
 
         return optional.orElseThrow( ()-> new ResponseStatusException(HttpStatus.NOT_FOUND,"Consulta nao cadastrada.") ) ;
+    }
+
+    public List<ConsultaEntity> getConsultaByPaciente(PacienteEntity paciente) {
+        List<ConsultaEntity> consultas = new ArrayList<>();
+
+        for (ConsultaEntity consulta : getAllConsultas()) {
+            if(paciente == consulta.getPaciente()) {
+                consultas.add(consulta);
+            }
+        }
+
+        return consultas;
     }
 
     public ConsultaEntity cadastraConsulta(ConsultaEntity entity, int idMedico, int idAgendamento) {

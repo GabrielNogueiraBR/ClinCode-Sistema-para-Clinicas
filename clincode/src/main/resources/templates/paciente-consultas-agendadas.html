@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/styles/pacientes.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Consultas futuras</title>
+    <title>ClinCode | Consultas Agendadas</title>
 </head>
 <body>
     <header class="header">
@@ -22,7 +22,7 @@
     </header>
     <div class="content">
         <div class="form-background">
-            <center><h3><b>CONSULTAS FUTURAS</b></h3></center>
+            <center><h3><b>CONSULTAS AGENDADAS</b></h3></center>
             <hr style="border-color: rgb(64 117 255);">
             
             <table class="table" id="tbEmpresas">
@@ -30,24 +30,21 @@
                     <tr>
                         <th>DATA CONSULTA</th>
                         <th>HORARIO</th>
-                        <th>MEDICO</th>
-                        <th> - </th>
+                        <th>ESPECIALIDADE</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>20/01/2021</td>
-                        <td>14:00</td>
-                        <td>Dr. Otavio Cordeiro</td>
-                        <td><button class="btn btn-clin">MAIS INFORMAÇÕES</button></td>
+                    <tr th:each="agendamentos : ${agendamento}">
+                        <td th:text="${agendamentos.data}"></td>
+                        <td th:text="${agendamentos.horario}"></td>
+                        <td th:text="${agendamentos.especialidade}"></td>
                     </tr>
-                    
+<!--                     
                     <tr>
                         <td>12/12/2020</td>
                         <td>15:00</td>
-                        <td>Dr. Gabriel Ferraz</td>
-                        <td><button class="btn btn-clin">MAIS INFORMAÇÕES</button></td>
-                    </tr>
+                        <td>Dermatologista</td>
+                    </tr> -->
 
                 </tbody>
             </table>

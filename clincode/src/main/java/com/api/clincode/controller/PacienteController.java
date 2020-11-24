@@ -6,8 +6,10 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import com.api.clincode.entity.AgendamentoEntity;
+import com.api.clincode.entity.ConsultaEntity;
 import com.api.clincode.entity.PacienteEntity;
 import com.api.clincode.service.AgendamentoService;
+import com.api.clincode.service.ConsultaService;
 import com.api.clincode.service.PacienteService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +36,9 @@ public class PacienteController {
 
     @Autowired
     private AgendamentoService agendamentoService;
+
+    @Autowired
+    private ConsultaService consultaService;
 
     @GetMapping()
     public List<PacienteEntity> getAllPacientes() {
@@ -99,30 +104,38 @@ public class PacienteController {
 
     //Exibir as CONSULTAS FUTURAS do paciente
     @GetMapping("{id}/consultas/agendadas")
-    public ModelAndView pacienteConsultasAgendadas() {
+    public ModelAndView pacienteConsultasAgendadas(@PathVariable int id) {
 
         //Buscar o paciente referente ao id
+        PacienteEntity paciente = service.getPacienteByID(id);
 
         //Buscar as consultas AGENDADAS do paciente (List<>)
+        List<AgendamentoEntity> agendamentos = agendamentoService.getAgendamentoByPaciente(paciente);
 
         //Adicionar essa lista de consultas (caso tenha) ao ModelAndView para ser exibido dinamicamente
+        ModelAndView mv = new ModelAndView("paciente-consultas-agendadas");
+        mv.addObject("agendamento", agendamentos);
 
         //Exibir a tela com as consultas agendadas
-        return new ModelAndView("paciente-consultas-agendadas");
+        return mv;
     }
 
     //Exibir as consultas JA REALIZADAS do paciente
     @GetMapping("{id}/consultas/historico")
-    public ModelAndView historicoConsultasHistorico() {
+    public ModelAndView historicoConsultasHistorico(@PathVariable int id) {
         
         //Buscar o paciente referente ao id
+        PacienteEntity paciente = service.getPacienteByID(id);
 
         //Buscar as consultas do paciente (List<>)
+        List<ConsultaEntity> consultas = consultaService.getConsultaByPaciente(paciente);
 
         //Adicionar essa lista de consultas (caso tenha) ao ModelAndView para ser exibido dinamicamente
+        ModelAndView mv = new ModelAndView("paciente-consultas-historico");
+        mv.addObject("consulta", consultas);
 
         //Exibir a tela com as CONSULTAS REALIZADAS
-        return new ModelAndView("paciente-consultas-historico");
+        return mv;
     }
 
 

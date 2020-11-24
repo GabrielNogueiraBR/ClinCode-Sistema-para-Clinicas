@@ -29,41 +29,25 @@
             <table class="table" id="tbEmpresas">
                 <thead>
                     <tr>
-                        <th>PACIENTE</th>
-                        <th>DATA CONSULTA</th>
-                        <th>HORARIO</th>
-                        <th>STATUS CONSULTA</th>
-                        <th>MEDICO</th>
-                        <th>SOLICITAÇÃO</th>
+                        <th>PACIENTE (RG)</th>
+                        <th>MEDICO (CRM)</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Raul Ryan</td>
-                        <td>20/10/2020</td>
-                        <td>14:00</td>
-                        <td>Reagendada</td>
-                        <td>Dr. Gabriel Ferraz</td>
-                        <td>-</td>
+                    <tr th:each="consultas : ${consulta}">
+                        <td th:text="${consultas.paciente.rg}"></td>
+                        <td th:text="${consultas.medico.crm}"></td>
                     </tr>
                     
-                    <tr>
+                    <!-- <tr>
                         <td>Raul Ryan</td>
-                        <td>28/09/2020</td>
-                        <td>9:00</td>
-                        <td>Cancelada</td>
                         <td>Dr. Gabriel Ferraz</td>
-                        <td>-</td>
                     </tr>
 
                     <tr>
                         <td>Raul Ryan</td>
-                        <td>11/08/2020</td>
-                        <td>10:00</td>
-                        <td>Concluida</td>
                         <td>Dr. Vitor Góes</td>
-                        <td>-</td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
             
