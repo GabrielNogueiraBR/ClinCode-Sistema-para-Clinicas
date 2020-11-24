@@ -1,5 +1,6 @@
 package com.api.clincode.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,6 +30,18 @@ public class AgendamentoService {
         Optional<AgendamentoEntity> op = repository.findById(id);
         
         return op.orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Agendamento sem registros"));
+    }
+
+    public List<AgendamentoEntity> getAgendamentoByPaciente(PacienteEntity paciente) {
+        List<AgendamentoEntity> agendamentos = new ArrayList<>();
+
+        for (AgendamentoEntity agendamento : getAllAgendamentos()) {
+            if(paciente == agendamento.getPaciente()) {
+                agendamentos.add(agendamento);
+            }
+        }
+
+        return agendamentos;
     }
 
     /**
