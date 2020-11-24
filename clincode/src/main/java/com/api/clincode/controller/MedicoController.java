@@ -143,4 +143,21 @@ public class MedicoController {
 
         return ResponseEntity.created(uri).build();
     }
+
+    
+    @GetMapping("/{idMedico}/consultas/historico")
+    public ModelAndView historicoConsultas(@PathVariable int idMedico){
+        //Buscar o medico referente ao id
+        MedicoEntity medicoEntity = medicoService.getMedicoByID(idMedico);
+
+        //Buscar as consultas do medico (List<>)
+        List<ConsultaEntity> consultas = consultaService.getConsultaByMedico(medicoEntity);
+
+        //Adicionar essa lista de consultas (caso tenha) ao ModelAndView para ser exibido dinamicamente
+        ModelAndView mv = new ModelAndView("paciente-consultas-historico");
+        mv.addObject("consulta", consultas);
+
+        //Exibir a tela com as CONSULTAS REALIZADAS
+        return mv;
+    }
 }

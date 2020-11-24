@@ -49,6 +49,18 @@ public class ConsultaService {
         return consultas;
     }
 
+    public List<ConsultaEntity> getConsultaByMedico(MedicoEntity medico) {
+        List<ConsultaEntity> consultas = new ArrayList<>();
+
+        for (ConsultaEntity consulta : getAllConsultas()) {
+            if(medico == consulta.getMedico()) {
+                consultas.add(consulta);
+            }
+        }
+
+        return consultas;
+    }
+
     public ConsultaEntity cadastraConsulta(ConsultaEntity entity, int idMedico, int idAgendamento) {
         
         MedicoEntity medico = medicoService.getMedicoByID(idMedico);
@@ -58,6 +70,8 @@ public class ConsultaService {
         PacienteEntity paciente = agendamento.getPaciente();
         entity.setPaciente(paciente);
         
+        //Excluindo o agendamento que acabou de ser consultado
+        agendamentoService.deleteAgendamentoByID(idAgendamento);
         return repository.save(entity);
     }
 
