@@ -11,11 +11,6 @@ public class ViewController {
     public ModelAndView paginaInicio() {
         return new ModelAndView("index");
     }
-
-    @GetMapping("login")
-    public ModelAndView paginaLogin() {
-        return new ModelAndView("login");
-    }
     
     @GetMapping("cadastro/pacientes")
     public ModelAndView cadastroPaciente() {

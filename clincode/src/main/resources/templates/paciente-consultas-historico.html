@@ -31,12 +31,14 @@
                     <tr>
                         <th>PACIENTE (RG)</th>
                         <th>MEDICO (CRM)</th>
+                        <th>QUEIXA</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr th:each="consultas : ${consulta}">
                         <td th:text="${consultas.paciente.rg}"></td>
                         <td th:text="${consultas.medico.crm}"></td>
+                        <td th:text="${consultas.queixa}"></td>
                     </tr>
                     
                     <!-- <tr>

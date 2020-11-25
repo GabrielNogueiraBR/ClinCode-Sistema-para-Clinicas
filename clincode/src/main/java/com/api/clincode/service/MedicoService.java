@@ -4,7 +4,10 @@ import java.util.List;
 import java.util.Optional;
 
 import com.api.clincode.entity.MedicoEntity;
+import com.api.clincode.entity.PessoaEntity;
+import com.api.clincode.model.Login;
 import com.api.clincode.repository.MedicoRepository;
+import com.api.clincode.repository.PessoaRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,6 +19,9 @@ public class MedicoService {
     
     @Autowired
     private MedicoRepository repository;
+
+    @Autowired
+    private PessoaRepository pessoaRepository;
 
 	public List<MedicoEntity> getAllMedicos() {
 		return repository.findAll();
@@ -81,6 +87,15 @@ public class MedicoService {
             return true;
         
         return false;
+	}
+
+	public String entrar(Login login) {
+            PessoaEntity pessoa = pessoaRepository.findPessoaByEmailAndPassword(login.getEmail(), login.getPassword());
+
+            //Caso exista o paciente vai executar normalmente
+            MedicoEntity entity = getMedicoByID(pessoa.getIdPessoa());
+
+            return ("/medicos" + "/" + entity.getIdPessoa() + "/perfil");
 	}
 
 

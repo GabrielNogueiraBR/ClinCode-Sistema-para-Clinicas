@@ -4,7 +4,10 @@ import java.util.List;
 import java.util.Optional;
 
 import com.api.clincode.entity.AtendenteEntity;
+import com.api.clincode.entity.PessoaEntity;
+import com.api.clincode.model.Login;
 import com.api.clincode.repository.AtendenteRepository;
+import com.api.clincode.repository.PessoaRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,6 +19,9 @@ public class AtendenteService {
     
     @Autowired
     private AtendenteRepository repository;
+
+    @Autowired
+    private PessoaRepository pessoaRepository;
 
 	public List<AtendenteEntity> getAllAtendentes() {
                 return repository.findAll();
@@ -64,6 +70,16 @@ public class AtendenteService {
                 repository.delete(entity);
                 return true;
 
+	}
+
+	public String entrar(Login login) {
+                
+                PessoaEntity pessoa = pessoaRepository.findPessoaByEmailAndPassword(login.getEmail(), login.getPassword());
+
+                //Caso exista o paciente vai executar normalmente
+                AtendenteEntity entity = getAtendenteByID(pessoa.getIdPessoa());
+
+                return ("/atendentes" + "/" + entity.getIdPessoa() + "/perfil");
 	}
 
 

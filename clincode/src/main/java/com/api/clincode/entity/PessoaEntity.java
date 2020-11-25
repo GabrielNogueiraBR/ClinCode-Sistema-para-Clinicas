@@ -29,6 +29,8 @@ public class PessoaEntity implements Serializable{
 
     @Column(unique = true)
     private String cpf;
+    
+    @Column(unique = true)
     private String email;
     private String telefone1;
     private String telefone2;

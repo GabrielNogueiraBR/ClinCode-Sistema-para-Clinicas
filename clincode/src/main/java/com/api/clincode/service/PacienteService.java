@@ -1,10 +1,15 @@
 package com.api.clincode.service;
 
+import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
+
 import com.api.clincode.entity.PacienteEntity;
+import com.api.clincode.entity.PessoaEntity;
+import com.api.clincode.model.Login;
 import com.api.clincode.repository.PacienteRepository;
+import com.api.clincode.repository.PessoaRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,7 +20,10 @@ import org.springframework.web.server.ResponseStatusException;
 public class PacienteService {
     
     @Autowired
-    private PacienteRepository repository;
+	private PacienteRepository repository;
+	
+	@Autowired
+	private PessoaRepository pessoaRepository;
 
 	public List<PacienteEntity> getAllPacientes() {
 		return repository.findAll(); 
@@ -61,6 +69,18 @@ public class PacienteService {
 			return true; //existe o paciente informado
 		
 		return false; //nao existe o paciente informado
+
+	}
+
+	
+	public String entrar(Login login) {
+		
+		PessoaEntity pessoa = pessoaRepository.findPessoaByEmailAndPassword(login.getEmail(), login.getPassword());
+
+		//Caso exista o paciente vai executar normalmente
+		PacienteEntity paciente = getPacienteByID(pessoa.getIdPessoa());
+
+		return ("/pacientes" + "/" + paciente.getIdPessoa() + "/perfil");
 
 	}
 
